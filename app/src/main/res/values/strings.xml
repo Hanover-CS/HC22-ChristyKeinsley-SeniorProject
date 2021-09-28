@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CoffeeDrinkGen</string>
+    <string name="hello">hello</string>
+    <string name="customize_me">Customize Me!</string>
+    <string name="generate_me">Generate Me!</string>
+    <string name="drink_generator">Drink Generator!</string>
+</resources>

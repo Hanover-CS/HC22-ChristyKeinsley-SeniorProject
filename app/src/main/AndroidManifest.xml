@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoffeeDrinkGen">
         <activity
+            android:name=".alternativeMilk"
+            android:exported="true" />
+        <activity
+            android:name=".hotIcedOrBlended"
+            android:exported="true" />
+        <activity
+            android:name=".customizeCoffee"
+            android:exported="true" />
+        <activity
             android:name=".activityGenerateMe"
             android:exported="true" />
         <activity

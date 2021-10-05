@@ -23,16 +23,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/generateMeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
-        android:background="@color/cardview_light_background"
         android:fontFamily="@font/autour_one"
-        android:onClick="GeneratedActivity"
+        android:onClick="activityGenerateMe"
         android:text="@string/generate_me"
         android:textAlignment="center"
-        android:textColor="#757575"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -40,17 +39,18 @@
         app:layout_constraintTop_toBottomOf="@+id/Drink_Gen" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/customizeMeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/autour_one"
         android:text="@string/customize_me"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+        app:layout_constraintTop_toBottomOf="@+id/generateMeBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

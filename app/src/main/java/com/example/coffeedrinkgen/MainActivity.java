@@ -1,35 +1,35 @@
 package com.example.coffeedrinkgen;
 
-
 import androidx.appcompat.app.AppCompatActivity;
-
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-
-import java.util.Random;
-
 public class MainActivity extends AppCompatActivity {
 
-
-    Button customizeButton;
+    Button generateMeButton;
+    Button customizeMeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        customizeButton = findViewById(R.id.btn1);
+        generateMeButton = findViewById(R.id.generateMeBtn);
+        customizeMeButton = findViewById(R.id.customizeMeBtn);
 
-        customizeButton.setOnClickListener(view -> {
-//                Intent intent = new Intent(MainActivity.this, GeneratedActivity.class);
-//                startActivity(intent);
+        //When you click this it will take you to the page where it presents the generated drink.
+        generateMeButton.setOnClickListener(view -> {
             MainActivity.this.startActivity(new Intent(MainActivity.this, activityGenerateMe.class));
         });
-//              When you click this it will take you to the page where it presents the generated drink.
+
+        //When you click on this it will take you to where you will start to customize the drink.
+        customizeMeButton.setOnClickListener(view -> {
+            MainActivity.this.startActivity(new Intent(MainActivity.this, customizeCoffee.class));
+        });
+
 
 //                Random rand = new Random();
 //                int numb = rand.nextInt(100) +1;
@@ -41,6 +41,6 @@ public class MainActivity extends AppCompatActivity {
 //                ed1.setText(String.valueOf(milk[randomMilkNum]));
 
     }
-    public void GeneratedActivity(View view) {
+    public void activityGenerateMe(View view) {
     }
 }

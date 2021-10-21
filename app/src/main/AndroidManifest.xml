@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoffeeDrinkGen">
         <activity
+            android:name=".activityCustomizeMe"
+            android:exported="true" />
+        <activity
+            android:name=".toppings"
+            android:exported="true" />
+        <activity
+            android:name=".syrupFlavours"
+            android:exported="true" />
+        <activity
+            android:name=".whipCream"
+            android:exported="true" />
+        <activity
             android:name=".alternativeMilk"
             android:exported="true" />
         <activity

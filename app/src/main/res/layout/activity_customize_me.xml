@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activityCustomizeMe">
+
+    <TextView
+        android:id="@+id/customizedDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="601dp"
+        android:fontFamily="@font/autour_one"
+        android:text="@string/here_is_your_customized_drink"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/customizedDrinkEditTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="384dp"
+        android:fontFamily="@font/autour_one"
+        android:text="@string/ready_for_your_drink"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customizedDrink"
+        />
+
+    <Button
+        android:id="@+id/customizeDrinkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="116dp"
+        android:fontFamily="@font/autour_one"
+        android:text="@string/click_me_to_generate2"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customizedDrinkEditTxt" />
+</androidx.constraintlayout.widget.ConstraintLayout>

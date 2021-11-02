@@ -7,31 +7,6 @@
     tools:context=".alternativeMilk">
 
     <Button
-        android:id="@+id/twoPercentBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="116dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/_2"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/onePercentBtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/onePercentBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/_1"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/twoPercentBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/skipBtn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,124 +15,171 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951" />
-
-    <Button
-        android:id="@+id/nonfatBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/nonfat"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/wholeBtn"
-        app:layout_constraintStart_toStartOf="@+id/onePercentBtn"
-        app:layout_constraintTop_toTopOf="@+id/wholeBtn"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/wholeBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/whole"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/twoPercentBtn"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/nonfatBtn"
-        app:layout_constraintTop_toBottomOf="@+id/twoPercentBtn" />
-
-    <Button
-        android:id="@+id/heavyCreamBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/heavy_cream"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/breveBtn"
-        app:layout_constraintEnd_toEndOf="@+id/nonfatBtn"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/breveBtn"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/breveBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/breve"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="@+id/wholeBtn"
-        app:layout_constraintTop_toBottomOf="@+id/wholeBtn" />
-
-    <Button
-        android:id="@+id/almondBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/almond"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/coconutBtn"
-        app:layout_constraintEnd_toStartOf="@+id/coconutBtn"
-        app:layout_constraintHorizontal_bias="0.378"
-        app:layout_constraintStart_toStartOf="@+id/heavyCreamBtn"
-        app:layout_constraintTop_toTopOf="@+id/coconutBtn"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/coconutBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/coconut"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/breveBtn"
-        app:layout_constraintTop_toBottomOf="@+id/breveBtn" />
-
-    <Button
-        android:id="@+id/oatBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/oat"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/soyBtn"
-        app:layout_constraintEnd_toStartOf="@+id/soyBtn"
-        app:layout_constraintHorizontal_bias="0.206"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/soyBtn"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/soyBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="72dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/soy"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coconutBtn" />
+        app:layout_constraintVertical_bias="0.976" />
 
     <TextView
         android:id="@+id/chooseMilk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/autour_one"
-        android:text="@string/choose_a_milk"
-        android:textSize="34sp"
+        android:text="@string/choose_a_Milk"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <RadioGroup
+        android:id="@+id/milkRadioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/onePercentRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/one_percent"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/twoPercentRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/two_percent"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/wholeMilkRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/whole_milk"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/nonfatMilkRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/nonfat_milk"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/heavyCreamRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/heavy_cream"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/breveRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/breve"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/coconutMilkRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/coconut_milk"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/almondMilkRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/almond_milk"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/soyMilkRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/soy_milk"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/oatMilkRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/oat_milk"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/nextBtnMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="182dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/autour_one"
+        android:text="@string/next"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toEndOf="@+id/skipBtn3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintVertical_bias="0.976" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,4 +55,16 @@
     <string name="here_is_your_customized_drink">Here is your Customized Drink!</string>
     <string name="ready_for_your_drink">Ready for your drink?!</string>
     <string name="click_me_to_generate2">Click me to Generate!</string>
+    <string name="one_percent">One Percent</string>
+    <string name="two_percent">Two Percent</string>
+    <string name="whole_milk">Whole Milk</string>
+    <string name="nonfat_milk">Nonfat Milk</string>
+    <string name="heavy_Cream">Heavy Cream</string>
+    <string name="breve1">Breve</string>
+    <string name="coconut_milk">Coconut Milk</string>
+    <string name="almond_milk">Almond Milk</string>
+    <string name="soy_milk">Soy Milk</string>
+    <string name="oat_milk">Oat Milk</string>
+    <string name="choose_a_Milk">Choose a Milk</string>
+    <string name="next1">Next</string>
 </resources>

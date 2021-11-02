@@ -23,20 +23,12 @@ public class hotIcedOrBlended extends AppCompatActivity {
         blendedButton = findViewById(R.id.blendedBtn);
         skipButton = findViewById(R.id.skipBtn2);
 
-        hotButton.setOnClickListener(view -> {
-           hotIcedOrBlended.this.startActivity(new Intent(hotIcedOrBlended.this, alternativeMilk.class));
-        });
+        hotButton.setOnClickListener(view -> hotIcedOrBlended.this.startActivity(new Intent(hotIcedOrBlended.this, alternativeMilk.class)));
 
-        icedButton.setOnClickListener(view -> {
-           hotIcedOrBlended.this.startActivity(new Intent(hotIcedOrBlended.this, alternativeMilk.class));
-        });
+        icedButton.setOnClickListener(view -> hotIcedOrBlended.this.startActivity(new Intent(hotIcedOrBlended.this, alternativeMilk.class)));
 
-        blendedButton.setOnClickListener(view -> {
-            hotIcedOrBlended.this.startActivity(new Intent(hotIcedOrBlended.this, alternativeMilk.class));
-        });
+        blendedButton.setOnClickListener(view -> hotIcedOrBlended.this.startActivity(new Intent(hotIcedOrBlended.this, alternativeMilk.class)));
 
-        skipButton.setOnClickListener(view -> {
-            hotIcedOrBlended.this.startActivity(new Intent(hotIcedOrBlended.this, alternativeMilk.class));
-        });
+        skipButton.setOnClickListener(view -> hotIcedOrBlended.this.startActivity(new Intent(hotIcedOrBlended.this, alternativeMilk.class)));
     }
 }

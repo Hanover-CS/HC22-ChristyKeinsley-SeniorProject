@@ -2,11 +2,13 @@ package com.example.coffeedrinkgen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,6 +28,8 @@ public class syrupFlavours extends AppCompatActivity {
     CheckBox hazelnutCheckBox;
     CheckBox pumpkinSpiceCheckBox;
 
+    String flavourChosen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +38,9 @@ public class syrupFlavours extends AppCompatActivity {
         nextButton = findViewById(R.id.nextBtn);
         skipButton = findViewById(R.id.skipBtn5);
 
-        nextButton.setOnClickListener(view -> {
-            syrupFlavours.this.startActivity(new Intent(syrupFlavours.this, toppings.class));
-        });
+        nextButton.setOnClickListener(view -> syrupFlavours.this.startActivity(new Intent(syrupFlavours.this, toppings.class)));
 
-        skipButton.setOnClickListener(view -> {
-            syrupFlavours.this.startActivity(new Intent(syrupFlavours.this, toppings.class));
-        });
+        skipButton.setOnClickListener(view -> syrupFlavours.this.startActivity(new Intent(syrupFlavours.this, toppings.class)));
 
         whiteMochaCheckBox = findViewById(R.id.whitemochaCheckB);
         mochaCheckBox = findViewById(R.id.mochaCheckB);
@@ -50,70 +50,63 @@ public class syrupFlavours extends AppCompatActivity {
         chaiCheckBox = findViewById(R.id.chaiCheckB);
         hazelnutCheckBox = findViewById(R.id.hazelnutCheckB);
         pumpkinSpiceCheckBox = findViewById(R.id.pumpkinCheckB);
+    }
 
+    @SuppressLint("NonConstantResourceId")
+    public void onClickSyrupCheckBox(View view) {
+        boolean check = ((CheckBox) view).isChecked();
+        switch (view.getId()) {
 
-        whiteMochaCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (whiteMochaCheckBox.isChecked())
+            case R.id.whitemochaCheckB:
+                if (check)
+                    flavourChosen = whiteMochaCheckBox.getText().toString();
                     syrupResult.add("White mocha");
-            }
-        });
-
-        mochaCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mochaCheckBox.isChecked())
+                Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.mochaCheckB:
+                if (check)
+                    flavourChosen = mochaCheckBox.getText().toString();
                     syrupResult.add("Mocha");
-            }
-        });
-
-        vanillaCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (vanillaCheckBox.isChecked())
+                Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.vanillaCheckB:
+                if (check)
+                    flavourChosen = vanillaCheckBox.getText().toString();
                     syrupResult.add("Vanilla");
-            }
-        });
-
-        sfVanillaCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (sfVanillaCheckBox.isChecked())
-                    syrupResult.add("Sf Vanilla");
-            }
-        });
-
-        caramelCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (caramelCheckBox.isChecked())
+                Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.sfVanillaCheckB:
+                if (check)
+                    flavourChosen = sfVanillaCheckBox.getText().toString();
+                    syrupResult.add("SF Vanilla");
+                Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.caramelCheckB:
+                if (check)
+                    flavourChosen = caramelCheckBox.getText().toString();
                     syrupResult.add("Caramel");
-            }
-        });
-
-        chaiCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (chaiCheckBox.isChecked())
+                Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.chaiCheckB:
+                if (check)
+                    flavourChosen = chaiCheckBox.getText().toString();
                     syrupResult.add("Chai");
-            }
-        });
-
-        hazelnutCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (hazelnutCheckBox.isChecked())
+                Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.hazelnutCheckB:
+                if (check)
+                    flavourChosen = hazelnutCheckBox.getText().toString();
                     syrupResult.add("Hazelnut");
-            }
-        });
-
-        pumpkinSpiceCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (pumpkinSpiceCheckBox.isChecked())
+                Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.pumpkinCheckB:
+                if (check)
+                    flavourChosen = pumpkinSpiceCheckBox.getText().toString();
                     syrupResult.add("Pumpkin Spice");
-            }
-        });
+                Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
     }
 }

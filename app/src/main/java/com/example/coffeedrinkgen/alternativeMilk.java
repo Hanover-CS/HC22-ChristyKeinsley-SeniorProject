@@ -48,8 +48,9 @@ public class alternativeMilk extends AppCompatActivity {
         oatRadioButton = findViewById(R.id.oatMilkRbtn);
 
         nextButton.setOnClickListener(view -> alternativeMilk.this.startActivity(new Intent(alternativeMilk.this, whipCream.class)));
+        Intent intent = new Intent(alternativeMilk.this, activityCustomizeMe.class);
+        intent.putExtra("milkChosen", milkChosen);
         skipButton.setOnClickListener(view -> alternativeMilk.this.startActivity(new Intent(alternativeMilk.this, whipCream.class)));
-
     }
 
     @SuppressLint("NonConstantResourceId")

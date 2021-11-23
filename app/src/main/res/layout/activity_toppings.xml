@@ -62,10 +62,12 @@
         android:fontFamily="@font/autour_one"
         android:text="@string/caramel_drizzle"
         android:textSize="20sp"
+        android:onClick="onClickToppingCheckBox"
         app:layout_constraintBottom_toTopOf="@+id/mochaDrizzleCheckB"
         app:layout_constraintEnd_toStartOf="@+id/cinnamonSgrCheckB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pickYourToppings" />
+        app:layout_constraintTop_toBottomOf="@+id/pickYourToppings"
+        tools:ignore="UsingOnClickInXml" />
 
     <CheckBox
         android:id="@+id/mochaDrizzleCheckB"
@@ -75,11 +77,13 @@
         android:fontFamily="@font/autour_one"
         android:text="@string/mocha_drizzle"
         android:textSize="20sp"
+        android:onClick="onClickToppingCheckBox"
         app:layout_constraintBottom_toTopOf="@+id/cinnamonPwdCheckB"
         app:layout_constraintEnd_toEndOf="@+id/caramelDrizzleCheckB"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/caramelDrizzleCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/caramelDrizzleCheckB" />
+        app:layout_constraintTop_toBottomOf="@+id/caramelDrizzleCheckB"
+        tools:ignore="UsingOnClickInXml" />
 
     <CheckBox
         android:id="@+id/cinnamonPwdCheckB"
@@ -89,11 +93,13 @@
         android:fontFamily="@font/autour_one"
         android:text="@string/cinnamon_powder"
         android:textSize="20sp"
+        android:onClick="onClickToppingCheckBox"
         app:layout_constraintBottom_toTopOf="@+id/skipBtn8"
         app:layout_constraintEnd_toEndOf="@+id/mochaDrizzleCheckB"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/mochaDrizzleCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/mochaDrizzleCheckB" />
+        app:layout_constraintTop_toBottomOf="@+id/mochaDrizzleCheckB"
+        tools:ignore="UsingOnClickInXml" />
 
     <CheckBox
         android:id="@+id/cinnamonSgrCheckB"
@@ -105,10 +111,12 @@
         android:fontFamily="@font/autour_one"
         android:text="@string/cinnamon_sugar"
         android:textSize="20sp"
+        android:onClick="onClickToppingCheckBox"
         app:layout_constraintBottom_toTopOf="@+id/nutmegCheckB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/caramelDrizzleCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/pickYourToppings" />
+        app:layout_constraintTop_toBottomOf="@+id/pickYourToppings"
+        tools:ignore="UsingOnClickInXml" />
 
     <CheckBox
         android:id="@+id/nutmegCheckB"
@@ -118,11 +126,13 @@
         android:fontFamily="@font/autour_one"
         android:text="@string/nutmeg"
         android:textSize="20sp"
+        android:onClick="onClickToppingCheckBox"
         app:layout_constraintBottom_toTopOf="@+id/pumpkinSpiceTCheckB"
         app:layout_constraintEnd_toEndOf="@+id/cinnamonSgrCheckB"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/cinnamonSgrCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/cinnamonSgrCheckB" />
+        app:layout_constraintTop_toBottomOf="@+id/cinnamonSgrCheckB"
+        tools:ignore="UsingOnClickInXml" />
 
     <CheckBox
         android:id="@+id/pumpkinSpiceTCheckB"
@@ -132,9 +142,11 @@
         android:fontFamily="@font/autour_one"
         android:text="@string/pumpkin_spice"
         android:textSize="20sp"
+        android:onClick="onClickToppingCheckBox"
         app:layout_constraintBottom_toTopOf="@+id/nextBtn2"
         app:layout_constraintEnd_toEndOf="@+id/nutmegCheckB"
         app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="@+id/nutmegCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/nutmegCheckB" />
+        app:layout_constraintTop_toBottomOf="@+id/nutmegCheckB"
+        tools:ignore="UsingOnClickInXml" />
 </androidx.constraintlayout.widget.ConstraintLayout>

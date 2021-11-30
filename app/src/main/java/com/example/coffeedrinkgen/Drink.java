@@ -53,7 +53,43 @@ public class Drink {
              + " and " + whippedCreamOption;}
 
 
+    // Getters
 
+    public void getRandomHotIcedOrBlended() {
+        Random randomHotIcedBlended = new Random();
+        int hotIcedBlendedNum = randomHotIcedBlended.nextInt(hotIcedBlendedList.size());
+        String hotIcedOrBlended = hotIcedBlendedList.get(hotIcedBlendedNum);
+        setHotIcedOrBlended(hotIcedOrBlended);
+    }
+
+    public String getHotIcedBlended(){ return hotIcedOrBlendedOption; }
+
+    public void getRandomFlavour() {
+        Random randomFlavour = new Random();
+        int flavourNum = randomFlavour.nextInt(flavourList.size());
+        String flavour = flavourList.get(flavourNum);
+        setFlavour(flavour);
+    }
+
+    public String getFlavour(){ return flavourOption; }
+
+    public void getRandomCoffeeOrNoCoffee() {
+        Random randomCoffee = new Random();
+        int coffeeOrNum = randomCoffee.nextInt(coffeeList.size());
+        String coffeeOrNone = coffeeList.get(coffeeOrNum);
+        setCoffeeOrNoCoffee(coffeeOrNone);
+    }
+
+    public String getCoffeeOrNoCoffee(){ return coffeeOption; }
+
+    public void getRandomMilk() {
+        Random randomMilk = new Random();
+        int milkNum = randomMilk.nextInt(milkList.size());
+        String milk = milkList.get(milkNum);
+        setMilk(milk);
+    }
+
+    public String getMilk(){ return milkOption; }
 
     public void getRandomTopping() {
         Random randomTopping = new Random();
@@ -62,49 +98,8 @@ public class Drink {
         setTopping(topping);
     }
 
-    public void setTopping(String t) {
-        toppingOption = t;
-    }
+    public String getTopping(){ return toppingOption; }
 
-//    public void getTopping() {
-//        toppingOption = setRandomTopping();
-//        //return toppingOption;
-//    }
-//
-    public void getRandomFlavour() {
-        Random randomFlavour = new Random();
-        int flavourNum = randomFlavour.nextInt(flavourList.size());
-        String flavour = flavourList.get(flavourNum);
-        setFlavour(flavour);
-    }
-
-    public void setFlavour(String f) {
-//        flavourOption = getFlavour();
-        flavourOption = f;
-    }
-
-//    public String getFlavour() {
-//        setRandomFlavour();
-//        return flavourOption;
-//    }
-//
-    public void getRandomMilk() {
-        Random randomMilk = new Random();
-        int milkNum = randomMilk.nextInt(milkList.size());
-        String milk = milkList.get(milkNum);
-        setMilk(milk);
-    }
-
-    public void setMilk(String m) {
-        //milkOption = getMilk();
-        milkOption = m;
-    }
-
-//    public String getMilk() {
-//        setRandomMilk();
-//        return milkOption;
-//    }
-//
     public void getRandomWhip() {
         Random randomWhip = new Random();
         int whipOrNoneNum = randomWhip.nextInt(whipCreamList.size());
@@ -112,49 +107,19 @@ public class Drink {
         setWhip(whippedCream);
     }
 
-    public void setWhip(String w) {
-//        whippedCreamOption = getWhip();
-        whippedCreamOption = w;
-    }
+    public String getWhip(){ return whippedCreamOption; }
 
-//    public String getWhip() {
-//        setRandomWhip();
-//        return whippedCreamOption;
-//    }
-//
-    public void getRandomHotIcedOrBlended() {
-        Random randomHotIcedBlended = new Random();
-        int hotIcedBlendedNum = randomHotIcedBlended.nextInt(hotIcedBlendedList.size());
-        String hotIcedOrBlended = hotIcedBlendedList.get(hotIcedBlendedNum);
-        setHotIcedOrBlended(hotIcedOrBlended);
-    }
+    // Setters
 
-    public void setHotIcedOrBlended(String HIB) {
-        //hotIcedOrBlendedOption = getHotIcedOrBlended();
-        hotIcedOrBlendedOption = HIB;
-    }
-//
-//    public String getHotIcedOrBlended() {
-//        setRandomHotIcedOrBlended();
-//        return hotIcedOrBlendedOption;
-//    }
-//
-    public void getRandomCoffeeOrNoCoffee() {
-        Random randomCoffee = new Random();
-        int coffeeOrNum = randomCoffee.nextInt(coffeeList.size());
-        String coffeeOrNone = coffeeList.get(coffeeOrNum);
-        setCoffeeOrNoCoffee(coffeeOrNone);
-    }
+    public void setHotIcedOrBlended(String h) { hotIcedOrBlendedOption = h; }
 
-    public void setCoffeeOrNoCoffee(String CON) {
-//        coffeeOption = getCoffeeOrNoCoffee();
-        coffeeOption = CON;
-    }
-//
-//    public String getCoffeeOrNoCoffee() {
-//        setRandomCoffeeOrNoCoffee();
-//        return coffeeOption;
-//    }
+    public void setFlavour(String f) { flavourOption = f; }
+
+    public void setCoffeeOrNoCoffee(String c) { coffeeOption = c; }
+
+    public void setMilk(String m) { milkOption = m; }
+
+    public void setTopping(String t) { toppingOption = t; }
+
+    public void setWhip(String w) { whippedCreamOption = w; }
 }
-
-

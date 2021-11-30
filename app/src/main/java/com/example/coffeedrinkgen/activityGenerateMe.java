@@ -1,8 +1,10 @@
 package com.example.coffeedrinkgen;
 
+import static java.lang.String.valueOf;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,9 +22,9 @@ public class activityGenerateMe extends AppCompatActivity {
         generatedDrinkText = findViewById(R.id.yourDrinkTxt);
         generateButton = findViewById(R.id.generateBtn);
 
-        generateButton.setOnClickListener(view -> generatedDrinkText.setText((CharSequence) drink));
+
+        generateButton.setOnClickListener(view -> generatedDrinkText.setText(valueOf(drink)));
     }
 
     Drink drink = Drink.genRandomDrink();
-
 }

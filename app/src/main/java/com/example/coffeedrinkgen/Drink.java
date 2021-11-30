@@ -1,33 +1,32 @@
 package com.example.coffeedrinkgen;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 public class Drink {
 
-    private String coffeeOption;
-    private String hotIcedOrBlendedOption;
-    private String milkOption;
-    private String whippedCreamOption;
-    private String flavourOption;
-    private String toppingOption;
+    String coffeeOption;
+    String hotIcedOrBlendedOption;
+    String milkOption;
+    String whippedCreamOption;
+    String flavourOption;
+    String toppingOption;
 
-    private final static List<String> flavourList = Arrays.asList("White Mocha", "Mocha", "Vanilla", "Sf Vanilla",
-            "Caramel", "Chai", "Hazelnut", "Pumpkin Spice");
+    private final static List<String> flavourList = Arrays.asList("white mocha", "mocha", "vanilla", "sugar free vanilla",
+            "caramel", "chai", "hazelnut", "pumpkin spice");
 
-    private final static List<String> toppingList = Arrays.asList("Caramel Drizzle", "Mocha Drizzle",
-            "Cinnamon Powder", "Cinnamon Sugar", "Nutmeg", "Pumpkin Spice");
+    private final static List<String> toppingList = Arrays.asList("caramel drizzle", "mocha drizzle",
+            "cinnamon powder", "cinnamon sugar", "nutmeg", "pumpkin spice");
 
-    private final static List<String> milkList = Arrays.asList("1%", "2%", "Nonfat Milk","Whole Milk", "Heavy Cream",
-            "Breve", "Almond Milk", "Coconut Milk", "Oat Milk", "Soy Milk");
+    private final static List<String> milkList = Arrays.asList("1%", "2%", "nonfat milk","whole milk", "heavy cream",
+            "breve", "almond milk", "coconut milk", "oat milk", "soy milk");
 
-    private final static List<String> whipCreamList = Arrays.asList("add Whip", "no Whip");
+    private final static List<String> whipCreamList = Arrays.asList("whip cream", "no whip");
 
-    private final static List<String> hotIcedBlendedList = Arrays.asList("Hot", "Iced", "Blended");
+    private final static List<String> hotIcedBlendedList = Arrays.asList("a hot", "an iced", "a blended");
 
-    private final static List<String> coffeeList = Arrays.asList("Coffee", "No Coffee");
+    private final static List<String> coffeeList = Arrays.asList("coffee", "no coffee");
 
     public Drink() {
         toppingOption = "";
@@ -40,27 +39,23 @@ public class Drink {
 
     public static Drink genRandomDrink() {
         Drink randDrink = new Drink();
-        randDrink.setRandomTopping();
-        randDrink.setRandomFlavour();
-        randDrink.setRandomMilk();
-        randDrink.setRandomWhip();
-        randDrink.setRandomHotIcedOrBlended();
-        randDrink.setRandomCoffeeOrNoCoffee();
+        randDrink.getRandomTopping();
+        randDrink.getRandomFlavour();
+        randDrink.getRandomMilk();
+        randDrink.getRandomWhip();
+        randDrink.getRandomCoffeeOrNoCoffee();
+        randDrink.getRandomHotIcedOrBlended();
         return randDrink;
     }
 
-//    public List <String> finalGenDrink(){
-//        List<String> finalDrinkList = new ArrayList<>();
-//        finalDrinkList.add(coffeeOption);
-//        finalDrinkList.add(flavourOption);
-//        finalDrinkList.add(toppingOption);
-//        finalDrinkList.add(milkOption);
-//        finalDrinkList.add(hotIcedOrBlendedOption);
-//        finalDrinkList.add(whippedCreamOption);
-//        return finalDrinkList;
-//    }
+    public String toString(){ return "I would like " + hotIcedOrBlendedOption + " " + flavourOption + " with "
+            + coffeeOption + " and made with " + milkOption + " with " + toppingOption
+             + " and " + whippedCreamOption;}
 
-    public void setRandomTopping() {
+
+
+
+    public void getRandomTopping() {
         Random randomTopping = new Random();
         int toppingNum = randomTopping.nextInt(toppingList.size());
         String topping = toppingList.get(toppingNum);
@@ -71,11 +66,12 @@ public class Drink {
         toppingOption = t;
     }
 
-    public String getTopping() {
-        return toppingOption;
-    }
-
-    public void setRandomFlavour() {
+//    public void getTopping() {
+//        toppingOption = setRandomTopping();
+//        //return toppingOption;
+//    }
+//
+    public void getRandomFlavour() {
         Random randomFlavour = new Random();
         int flavourNum = randomFlavour.nextInt(flavourList.size());
         String flavour = flavourList.get(flavourNum);
@@ -83,14 +79,16 @@ public class Drink {
     }
 
     public void setFlavour(String f) {
+//        flavourOption = getFlavour();
         flavourOption = f;
     }
 
-    public String getFlavour() {
-        return flavourOption;
-    }
-
-    public void setRandomMilk() {
+//    public String getFlavour() {
+//        setRandomFlavour();
+//        return flavourOption;
+//    }
+//
+    public void getRandomMilk() {
         Random randomMilk = new Random();
         int milkNum = randomMilk.nextInt(milkList.size());
         String milk = milkList.get(milkNum);
@@ -98,15 +96,16 @@ public class Drink {
     }
 
     public void setMilk(String m) {
+        //milkOption = getMilk();
         milkOption = m;
     }
 
-    public String getMilk() {
-        return milkOption;
-    }
-
-
-    public void setRandomWhip() {
+//    public String getMilk() {
+//        setRandomMilk();
+//        return milkOption;
+//    }
+//
+    public void getRandomWhip() {
         Random randomWhip = new Random();
         int whipOrNoneNum = randomWhip.nextInt(whipCreamList.size());
         String whippedCream = whipCreamList.get(whipOrNoneNum);
@@ -114,15 +113,16 @@ public class Drink {
     }
 
     public void setWhip(String w) {
+//        whippedCreamOption = getWhip();
         whippedCreamOption = w;
     }
 
-    public String getWhip() {
-        return whippedCreamOption;
-    }
-
-
-    public void setRandomHotIcedOrBlended() {
+//    public String getWhip() {
+//        setRandomWhip();
+//        return whippedCreamOption;
+//    }
+//
+    public void getRandomHotIcedOrBlended() {
         Random randomHotIcedBlended = new Random();
         int hotIcedBlendedNum = randomHotIcedBlended.nextInt(hotIcedBlendedList.size());
         String hotIcedOrBlended = hotIcedBlendedList.get(hotIcedBlendedNum);
@@ -130,14 +130,16 @@ public class Drink {
     }
 
     public void setHotIcedOrBlended(String HIB) {
+        //hotIcedOrBlendedOption = getHotIcedOrBlended();
         hotIcedOrBlendedOption = HIB;
     }
-
-    public String getHotIcedOrBlended() {
-        return hotIcedOrBlendedOption;
-    }
-
-    public void setRandomCoffeeOrNoCoffee() {
+//
+//    public String getHotIcedOrBlended() {
+//        setRandomHotIcedOrBlended();
+//        return hotIcedOrBlendedOption;
+//    }
+//
+    public void getRandomCoffeeOrNoCoffee() {
         Random randomCoffee = new Random();
         int coffeeOrNum = randomCoffee.nextInt(coffeeList.size());
         String coffeeOrNone = coffeeList.get(coffeeOrNum);
@@ -145,12 +147,14 @@ public class Drink {
     }
 
     public void setCoffeeOrNoCoffee(String CON) {
+//        coffeeOption = getCoffeeOrNoCoffee();
         coffeeOption = CON;
     }
-
-    public String getCoffeeOrNoCoffee() {
-        return coffeeOption;
-    }
+//
+//    public String getCoffeeOrNoCoffee() {
+//        setRandomCoffeeOrNoCoffee();
+//        return coffeeOption;
+//    }
 }
 
 

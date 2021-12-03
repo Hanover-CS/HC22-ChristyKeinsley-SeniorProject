@@ -34,13 +34,12 @@
         android:layout_marginBottom="384dp"
         android:fontFamily="@font/autour_one"
         android:text="@string/ready_for_your_drink"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customizedDrink"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/customizedDrink" />
 
     <Button
         android:id="@+id/customizeDrinkBtn"

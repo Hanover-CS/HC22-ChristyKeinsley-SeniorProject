@@ -29,6 +29,8 @@ public class syrupFlavours extends AppCompatActivity {
     CheckBox pumpkinSpiceCheckBox;
 
     String flavourChosen;
+    String flavourAdded;
+    String whipChose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,5 +110,16 @@ public class syrupFlavours extends AppCompatActivity {
             default:
                 break;
         }
+
+        Intent whipIntent = getIntent();
+        whipChose = whipIntent.getStringExtra("whipChosen");
+
+        flavourAdded = whipChose + " " + flavourChosen;
+
+        Intent flavourIntent = new Intent(syrupFlavours.this, toppings.class);
+        flavourIntent.putExtra("flavourChosen", flavourAdded);
+        startActivity(flavourIntent);
+
+
     }
 }

@@ -11,6 +11,9 @@ public class whipCream extends AppCompatActivity {
     Button whipCreamButton;
     Button noWhipCreamButton;
     Button skipButton;
+    String whipChosen;
+    String milkChose;
+    String whipAdded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +25,26 @@ public class whipCream extends AppCompatActivity {
         skipButton = findViewById(R.id.skipBtn4);
 
         whipCreamButton.setOnClickListener(view -> {
+            whipChosen = whipCreamButton.getText().toString();
             whipCream.this.startActivity(new Intent(whipCream.this, syrupFlavours.class));
         });
 
         noWhipCreamButton.setOnClickListener(view -> {
+            whipChosen = noWhipCreamButton.getText().toString();
             whipCream.this.startActivity(new Intent(whipCream.this, syrupFlavours.class));
         });
 
         skipButton.setOnClickListener(view -> {
             whipCream.this.startActivity(new Intent(whipCream.this, syrupFlavours.class));
         });
+
+        Intent milkIntent = getIntent();
+        milkChose = milkIntent.getStringExtra("milkChosen");
+
+        whipAdded = milkChose + " " + whipChosen;
+
+        Intent whipIntent = new Intent(whipCream.this, syrupFlavours.class);
+        whipIntent.putExtra("whipChosen", whipAdded);
+        startActivity(whipIntent);
     }
 }

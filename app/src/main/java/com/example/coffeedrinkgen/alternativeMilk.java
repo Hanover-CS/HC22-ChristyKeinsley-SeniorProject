@@ -48,8 +48,11 @@ public class alternativeMilk extends AppCompatActivity {
         oatRadioButton = findViewById(R.id.oatMilkRbtn);
 
         nextButton.setOnClickListener(view -> alternativeMilk.this.startActivity(new Intent(alternativeMilk.this, whipCream.class)));
-        Intent intent = new Intent(alternativeMilk.this, activityCustomizeMe.class);
-        intent.putExtra("milkChosen", milkChosen);
+
+//        Intent milkIntent = new Intent(alternativeMilk.this, customizeCoffee.class);
+//        milkIntent.putExtra("milkChosen", milkChosen);
+
+
         skipButton.setOnClickListener(view -> alternativeMilk.this.startActivity(new Intent(alternativeMilk.this, whipCream.class)));
     }
 
@@ -111,5 +114,17 @@ public class alternativeMilk extends AppCompatActivity {
             default:
                 break;
         }
+//        Intent milkIntent = new Intent(alternativeMilk.this, activityCustomizeMe.class);
+//        milkIntent.putExtra("milkChosen", milkChosen);
+//        startActivity(milkIntent);
+
+//        String finalD = ("I would like " + " " + " with "
+//                 + " and made with " + milkChosen + " with "
+//                + " and ");
+
+        Intent milkIntent = new Intent(alternativeMilk.this, whipCream.class);
+        milkIntent.putExtra("milkChosen", milkChosen);
+        startActivity(milkIntent);
+
     }
 }

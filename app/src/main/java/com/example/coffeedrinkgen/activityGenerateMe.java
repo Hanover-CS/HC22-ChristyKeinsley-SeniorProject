@@ -22,7 +22,6 @@ public class activityGenerateMe extends AppCompatActivity {
         generatedDrinkText = findViewById(R.id.yourDrinkTxt);
         generateButton = findViewById(R.id.generateBtn);
 
-
         generateButton.setOnClickListener(view -> generatedDrinkText.setText(valueOf(drink)));
     }
 

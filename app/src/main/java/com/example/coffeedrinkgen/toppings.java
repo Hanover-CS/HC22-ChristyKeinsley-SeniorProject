@@ -27,6 +27,8 @@ public class toppings extends AppCompatActivity {
     CheckBox pumpkinSpiceCheckBox;
 
     String toppingChosen;
+    String flavourChose;
+    String toppingAdded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,5 +93,17 @@ public class toppings extends AppCompatActivity {
             default:
                 break;
         }
+
+
+        Intent flavourIntent = getIntent();
+        flavourChose = flavourIntent.getStringExtra("flavourChosen");
+
+        toppingAdded = flavourChose + " " + toppingChosen;
+
+        Intent toppingIntent = new Intent(toppings.this, activityCustomizeMe.class);
+        toppingIntent.putExtra("toppingChosen", toppingAdded);
+        startActivity(toppingIntent);
+
+
     }
 }

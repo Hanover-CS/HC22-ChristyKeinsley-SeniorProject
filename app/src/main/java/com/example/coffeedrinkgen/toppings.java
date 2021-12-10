@@ -94,16 +94,15 @@ public class toppings extends AppCompatActivity {
                 break;
         }
 
-
         Intent flavourIntent = getIntent();
         flavourChose = flavourIntent.getStringExtra("flavourChosen");
 
-        toppingAdded = flavourChose + " " + toppingChosen;
+        //toppingAdded = flavourChose + " " + toppingChosen;
+
+        toppingAdded = flavourChose + " " + toppingResult;
 
         Intent toppingIntent = new Intent(toppings.this, activityCustomizeMe.class);
         toppingIntent.putExtra("toppingChosen", toppingAdded);
         startActivity(toppingIntent);
-
-
     }
 }

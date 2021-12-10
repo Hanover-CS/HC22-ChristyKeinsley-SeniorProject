@@ -114,7 +114,8 @@ public class syrupFlavours extends AppCompatActivity {
         Intent whipIntent = getIntent();
         whipChose = whipIntent.getStringExtra("whipChosen");
 
-        flavourAdded = whipChose + " " + flavourChosen;
+        //flavourAdded = whipChose + " " + flavourChosen;
+        flavourAdded = whipChose + " " + syrupResult;
 
         Intent flavourIntent = new Intent(syrupFlavours.this, toppings.class);
         flavourIntent.putExtra("flavourChosen", flavourAdded);

@@ -49,9 +49,6 @@ public class alternativeMilk extends AppCompatActivity {
 
         nextButton.setOnClickListener(view -> alternativeMilk.this.startActivity(new Intent(alternativeMilk.this, whipCream.class)));
 
-//        Intent milkIntent = new Intent(alternativeMilk.this, customizeCoffee.class);
-//        milkIntent.putExtra("milkChosen", milkChosen);
-
 
         skipButton.setOnClickListener(view -> alternativeMilk.this.startActivity(new Intent(alternativeMilk.this, whipCream.class)));
     }
@@ -127,4 +124,5 @@ public class alternativeMilk extends AppCompatActivity {
         startActivity(milkIntent);
 
     }
+
 }

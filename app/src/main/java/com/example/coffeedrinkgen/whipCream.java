@@ -15,6 +15,7 @@ public class whipCream extends AppCompatActivity {
     Button whipCreamRadioButton;
     Button noWhipCreamRadioButton;
     Button skipButton;
+
     String whipChosen;
     String milkChose;
     String whipAdded;
@@ -53,7 +54,6 @@ public class whipCream extends AppCompatActivity {
 
         Intent milkIntent = getIntent();
         milkChose = milkIntent.getStringExtra("milkChosen");
-        System.out.println(milkChose);
 
         whipAdded = milkChose + " " + whipChosen;
 

@@ -123,6 +123,8 @@ public class alternativeMilk extends AppCompatActivity {
         milkIntent.putExtra("milkChosen", milkChosen);
         startActivity(milkIntent);
 
+//        hotIcedBlendedChosen
+
     }
 
 }

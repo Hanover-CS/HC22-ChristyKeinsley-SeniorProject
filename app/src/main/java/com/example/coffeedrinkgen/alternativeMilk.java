@@ -27,6 +27,8 @@ public class alternativeMilk extends AppCompatActivity {
     Button skipButton;
 
     String milkChosen;
+    String hotIcedBlendedChose;
+    String milkAdded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,19 +113,15 @@ public class alternativeMilk extends AppCompatActivity {
             default:
                 break;
         }
-//        Intent milkIntent = new Intent(alternativeMilk.this, activityCustomizeMe.class);
-//        milkIntent.putExtra("milkChosen", milkChosen);
-//        startActivity(milkIntent);
 
-//        String finalD = ("I would like " + " " + " with "
-//                 + " and made with " + milkChosen + " with "
-//                + " and ");
+        Intent hotIcedBlendedIntent = getIntent();
+        hotIcedBlendedChose = hotIcedBlendedIntent.getStringExtra("hotIcedBlendedChosen");
+
+        milkAdded = hotIcedBlendedChose + " " + milkChosen;
 
         Intent milkIntent = new Intent(alternativeMilk.this, whipCream.class);
         milkIntent.putExtra("milkChosen", milkChosen);
         startActivity(milkIntent);
-
-//        hotIcedBlendedChosen
 
     }
 

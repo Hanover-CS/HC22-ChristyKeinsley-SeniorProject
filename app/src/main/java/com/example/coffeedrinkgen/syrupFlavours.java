@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,8 +17,7 @@ public class syrupFlavours extends AppCompatActivity {
 
     ArrayList<Object> syrupResult = new ArrayList<>();
 
-    Button nextButton;
-    Button skipButton;
+    RadioButton randomSyrup;
 
     CheckBox whiteMochaCheckBox;
     CheckBox mochaCheckBox;
@@ -37,12 +37,7 @@ public class syrupFlavours extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syrup_flavours);
 
-        nextButton = findViewById(R.id.nextBtn);
-        skipButton = findViewById(R.id.skipBtn5);
-
-        nextButton.setOnClickListener(view -> syrupFlavours.this.startActivity(new Intent(syrupFlavours.this, toppings.class)));
-
-        skipButton.setOnClickListener(view -> syrupFlavours.this.startActivity(new Intent(syrupFlavours.this, toppings.class)));
+        randomSyrup = findViewById(R.id.randomSyrupRbtn);
 
         whiteMochaCheckBox = findViewById(R.id.whitemochaCheckB);
         mochaCheckBox = findViewById(R.id.mochaCheckB);
@@ -104,8 +99,12 @@ public class syrupFlavours extends AppCompatActivity {
             case R.id.pumpkinCheckB:
                 if (check)
                     flavourChosen = pumpkinSpiceCheckBox.getText().toString();
-                    syrupResult.add("Pumpkin Spice");
+                syrupResult.add("Pumpkin Spice");
                 Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
+            case R.id.randomSyrupRbtn:
+                if (check)
+                    flavourChosen = Drink.genRandomDrink().getFlavour();
+                    syrupResult.add(flavourChosen);
                 break;
             default:
                 break;

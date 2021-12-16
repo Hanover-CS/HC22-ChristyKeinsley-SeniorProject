@@ -6,7 +6,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -22,9 +21,9 @@ public class alternativeMilk extends AppCompatActivity {
     RadioButton coconutRadioButton;
     RadioButton oatRadioButton;
     RadioButton soyRadioButton;
+    RadioButton randomMilkRadioButton;
 
-    Button nextButton;
-    Button skipButton;
+
 
     String milkChosen;
     String hotIcedBlendedChose;
@@ -34,9 +33,6 @@ public class alternativeMilk extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alternative_milk);
-
-        nextButton = findViewById(R.id.nextBtnMilk);
-        skipButton = findViewById(R.id.skipBtn3);
 
         onePercentRadioButton = findViewById(R.id.onePercentRbtn);
         twoPercentRadioButton = findViewById(R.id.twoPercentRbtn);
@@ -48,11 +44,8 @@ public class alternativeMilk extends AppCompatActivity {
         coconutRadioButton = findViewById(R.id.coconutMilkRbtn);
         soyRadioButton = findViewById(R.id.soyMilkRbtn);
         oatRadioButton = findViewById(R.id.oatMilkRbtn);
+        randomMilkRadioButton = findViewById(R.id.randomMilkRbtn);
 
-        nextButton.setOnClickListener(view -> alternativeMilk.this.startActivity(new Intent(alternativeMilk.this, whipCream.class)));
-
-
-        skipButton.setOnClickListener(view -> alternativeMilk.this.startActivity(new Intent(alternativeMilk.this, whipCream.class)));
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -109,6 +102,9 @@ public class alternativeMilk extends AppCompatActivity {
                 if (check)
                     milkChosen = oatRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), milkChosen, Toast.LENGTH_SHORT).show();
+            case R.id.randomMilkRbtn:
+                if (check)
+                    milkChosen = Drink.genRandomDrink().getMilk();
                 break;
             default:
                 break;
@@ -120,7 +116,7 @@ public class alternativeMilk extends AppCompatActivity {
         milkAdded = hotIcedBlendedChose + " " + milkChosen;
 
         Intent milkIntent = new Intent(alternativeMilk.this, whipCream.class);
-        milkIntent.putExtra("milkChosen", milkChosen);
+        milkIntent.putExtra("milkChosen", milkAdded);
         startActivity(milkIntent);
 
     }

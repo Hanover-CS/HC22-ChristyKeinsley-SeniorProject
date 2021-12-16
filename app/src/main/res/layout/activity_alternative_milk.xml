@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".alternativeMilk">
 
-    <Button
-        android:id="@+id/skipBtn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/skip2"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
 
     <TextView
         android:id="@+id/chooseMilk"
@@ -164,22 +151,19 @@
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
 
+        <RadioButton
+            android:id="@+id/randomMilkRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickMilkBtn"
+            android:text="@string/randomize"
+            android:textSize="18sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
     </RadioGroup>
 
-    <Button
-        android:id="@+id/nextBtnMilk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="182dp"
-        android:layout_marginEnd="25dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/next"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toEndOf="@+id/skipBtn3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

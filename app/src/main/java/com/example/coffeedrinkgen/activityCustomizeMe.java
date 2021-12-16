@@ -29,6 +29,5 @@ public class activityCustomizeMe extends AppCompatActivity {
         finalDrink = finalDrinkIntent.getStringExtra("toppingChosen");
 
         customizeGenerateButton.setOnClickListener(view -> customizeGeneratedDrinkText.setText(finalDrink));
-
     }
 }

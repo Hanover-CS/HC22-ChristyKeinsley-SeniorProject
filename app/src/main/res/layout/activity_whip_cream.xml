@@ -6,26 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".whipCream">
 
-    <Button
-        android:id="@+id/skipBtn4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/skip"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
-
     <RadioGroup
         android:id="@+id/whipCreamRGBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="193dp"
-        android:layout_marginBottom="224dp"
-        app:layout_constraintBottom_toTopOf="@+id/skipBtn4"
+        android:layout_marginBottom="394dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -45,7 +32,7 @@
         <RadioButton
             android:id="@+id/noWhipCreamRbtn"
             android:layout_width="wrap_content"
-            android:layout_height="202dp"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/autour_one"
             android:onClick="onClickWhipBtn"
             android:text="@string/no_whip_cream5"
@@ -53,6 +40,19 @@
             tools:ignore="OnClick,UsingOnClickInXml"
             tools:layout_editor_absoluteX="74dp"
             tools:layout_editor_absoluteY="427dp" />
+
+        <RadioButton
+            android:id="@+id/randomWhipCreamRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickWhipBtn"
+            android:text="@string/randomize"
+            android:textSize="34sp"
+            tools:ignore="OnClick,UsingOnClickInXml"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="427dp" />
+
 
     </RadioGroup>
 

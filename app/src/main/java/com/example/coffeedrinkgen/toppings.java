@@ -6,8 +6,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,8 +16,7 @@ public class toppings extends AppCompatActivity {
 
     ArrayList<Object> toppingResult = new ArrayList<>();
 
-    Button nextButton;
-    Button skipButton;
+    RadioButton randomTopping;
 
     CheckBox caramelDrizzleCheckBox;
     CheckBox mochaDrizzleCheckBox;
@@ -35,11 +34,7 @@ public class toppings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_toppings);
 
-        nextButton = findViewById(R.id.nextBtn2);
-        skipButton = findViewById(R.id.skipBtn8);
-
-        nextButton.setOnClickListener(view -> toppings.this.startActivity(new Intent(toppings.this, activityCustomizeMe.class)));
-        skipButton.setOnClickListener(view -> toppings.this.startActivity(new Intent(toppings.this, activityCustomizeMe.class)));
+        randomTopping = findViewById(R.id.randomToppingRbtn);
 
         caramelDrizzleCheckBox = findViewById(R.id.caramelCheckB);
         mochaDrizzleCheckBox = findViewById(R.id.mochaDrizzleCheckB);
@@ -89,6 +84,10 @@ public class toppings extends AppCompatActivity {
                     toppingChosen = pumpkinSpiceCheckBox.getText().toString();
                     toppingResult.add("Pumpkin spice");
                 Toast.makeText(getApplicationContext(), toppingChosen, Toast.LENGTH_SHORT).show();
+            case R.id.randomToppingRbtn:
+                if (check)
+                    toppingChosen = Drink.genRandomDrink().getTopping();
+                    toppingResult.add(toppingChosen);
                 break;
             default:
                 break;

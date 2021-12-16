@@ -56,18 +56,18 @@
             tools:layout_editor_absoluteX="74dp"
             tools:layout_editor_absoluteY="427dp" />
 
+        <RadioButton
+            android:id="@+id/randomCoffeeRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickCoffeeBtn"
+            android:text="@string/randomize"
+            android:textSize="34sp"
+            tools:ignore="OnClick,UsingOnClickInXml"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="427dp" />
+
     </RadioGroup>
 
-    <Button
-        android:id="@+id/skipBtn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/skip"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,16 +6,15 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class hotIcedOrBlended extends AppCompatActivity {
 
-    Button hotRadioButton;
-    Button icedRadioButton;
-    Button blendedRadioButton;
-    Button skipButton;
+    RadioButton hotRadioButton;
+    RadioButton icedRadioButton;
+    RadioButton blendedRadioButton;
+    RadioButton randomHotIcedBlendedRadioButton;
 
     String hotIcedBlendedChosen;
     String hotIcedBlendedAdded;
@@ -29,9 +28,8 @@ public class hotIcedOrBlended extends AppCompatActivity {
         hotRadioButton = findViewById(R.id.hotRbtn);
         icedRadioButton = findViewById(R.id.icedRbtn);
         blendedRadioButton = findViewById(R.id.blendedRbtn);
-        skipButton = findViewById(R.id.skipBtn2);
+        randomHotIcedBlendedRadioButton = findViewById(R.id.randomHotIcedBlendedRbtn);
 
-        skipButton.setOnClickListener(view -> hotIcedOrBlended.this.startActivity(new Intent(hotIcedOrBlended.this, alternativeMilk.class)));
     }
 
         @SuppressLint("NonConstantResourceId")
@@ -52,6 +50,9 @@ public class hotIcedOrBlended extends AppCompatActivity {
                 if (check)
                     hotIcedBlendedChosen = blendedRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), hotIcedBlendedChosen, Toast.LENGTH_SHORT).show();
+            case R.id.randomHotIcedBlendedRbtn:
+                if (check)
+                    hotIcedBlendedChosen =  Drink.genRandomDrink().getHotIcedBlended();
                 break;
             default:
                 break;

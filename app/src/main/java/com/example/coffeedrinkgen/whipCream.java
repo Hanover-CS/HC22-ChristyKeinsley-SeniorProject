@@ -6,15 +6,15 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class whipCream extends AppCompatActivity {
 
-    Button whipCreamRadioButton;
-    Button noWhipCreamRadioButton;
-    Button skipButton;
+    RadioButton whipCreamRadioButton;
+    RadioButton noWhipCreamRadioButton;
+    RadioButton randomWhipCreamRadioButton;
+
 
     String whipChosen;
     String milkChose;
@@ -27,11 +27,8 @@ public class whipCream extends AppCompatActivity {
 
         whipCreamRadioButton = findViewById(R.id.whipCreamRbtn);
         noWhipCreamRadioButton = findViewById(R.id.noWhipCreamRbtn);
-        skipButton = findViewById(R.id.skipBtn4);
+        randomWhipCreamRadioButton = findViewById(R.id.randomWhipCreamRbtn);
 
-        skipButton.setOnClickListener(view -> {
-            whipCream.this.startActivity(new Intent(whipCream.this, syrupFlavours.class));
-        });
     }
     @SuppressLint("NonConstantResourceId")
     public void onClickWhipBtn(View view) {
@@ -47,6 +44,9 @@ public class whipCream extends AppCompatActivity {
                 if (check)
                     whipChosen = noWhipCreamRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), whipChosen, Toast.LENGTH_SHORT).show();
+            case R.id.randomWhipCreamRbtn:
+                if (check)
+                    whipChosen = Drink.genRandomDrink().getWhip();
                 break;
             default:
                 break;

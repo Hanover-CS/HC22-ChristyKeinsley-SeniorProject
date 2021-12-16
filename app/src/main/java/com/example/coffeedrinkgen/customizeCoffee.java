@@ -6,17 +6,17 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class customizeCoffee extends AppCompatActivity {
 
-    Button coffeeRadioButton;
-    Button noCoffeeRadioButton;
-    Button skipButton;
+    RadioButton coffeeRadioButton;
+    RadioButton noCoffeeRadioButton;
+    RadioButton randomCoffeeRadioButton;
 
     String coffeeChosen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +25,8 @@ public class customizeCoffee extends AppCompatActivity {
 
         coffeeRadioButton = findViewById(R.id.coffeeRbtn);
         noCoffeeRadioButton = findViewById(R.id.noCoffeeRbtn);
-        skipButton = findViewById(R.id.skipBtn1);
+        randomCoffeeRadioButton = findViewById(R.id.randomCoffeeRbtn);
 
-        skipButton.setOnClickListener(view -> {
-            customizeCoffee.this.startActivity(new Intent(customizeCoffee.this, hotIcedOrBlended.class));
-        });
     }
         @SuppressLint("NonConstantResourceId")
         public void onClickCoffeeBtn(View view) {
@@ -45,11 +42,18 @@ public class customizeCoffee extends AppCompatActivity {
                     if (check)
                         coffeeChosen = noCoffeeRadioButton.getText().toString();
                     Toast.makeText(getApplicationContext(), coffeeChosen, Toast.LENGTH_SHORT).show();
+                case R.id.randomCoffeeRbtn:
+                    if (check)
+                        coffeeChosen = Drink.genRandomDrink().getCoffeeOrNoCoffee();
                 default:
                     break;
             }
 
             Intent coffeeIntent = new Intent(customizeCoffee.this, hotIcedOrBlended.class);
+
+            String coffeeAdded;
+            //coffeeAdded = "I would like "
+
             coffeeIntent.putExtra("coffeeChosen", coffeeChosen);
             startActivity(coffeeIntent);
     }

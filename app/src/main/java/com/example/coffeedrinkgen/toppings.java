@@ -6,24 +6,20 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 
 public class toppings extends AppCompatActivity {
 
-    ArrayList<Object> toppingResult = new ArrayList<>();
-
     RadioButton randomTopping;
 
-    CheckBox caramelDrizzleCheckBox;
-    CheckBox mochaDrizzleCheckBox;
-    CheckBox cinnamonPwdCheckBox;
-    CheckBox cinnamonSgrCheckBox;
-    CheckBox nutmegCheckBox;
-    CheckBox pumpkinSpiceCheckBox;
+    RadioButton caramelDrizzleRadioButton;
+    RadioButton mochaDrizzleRadioButton;
+    RadioButton cinnamonPwdRadioButton;
+    RadioButton cinnamonSgrRadioButton;
+    RadioButton nutmegRadioButton;
+    RadioButton pumpkinSpiceRadioButton;
 
     String toppingChosen;
     String flavourChose;
@@ -36,58 +32,51 @@ public class toppings extends AppCompatActivity {
 
         randomTopping = findViewById(R.id.randomToppingRbtn);
 
-        caramelDrizzleCheckBox = findViewById(R.id.caramelCheckB);
-        mochaDrizzleCheckBox = findViewById(R.id.mochaDrizzleCheckB);
-        cinnamonPwdCheckBox = findViewById(R.id.cinnamonPwdCheckB);
-        cinnamonSgrCheckBox = findViewById(R.id.cinnamonSgrCheckB);
-        nutmegCheckBox = findViewById(R.id.nutmegCheckB);
-        pumpkinSpiceCheckBox = findViewById(R.id.pumpkinSpiceTCheckB);
+        caramelDrizzleRadioButton = findViewById(R.id.caramelDrizzleRbtn);
+        mochaDrizzleRadioButton = findViewById(R.id.mochaDrizzleRbtn);
+        cinnamonPwdRadioButton = findViewById(R.id.cinnamonPwdRbtn);
+        cinnamonSgrRadioButton = findViewById(R.id.cinnamonSugarRbtn);
+        nutmegRadioButton = findViewById(R.id.nutmegRbtn);
+        pumpkinSpiceRadioButton = findViewById(R.id.pumpkinSpiceRbtn);
     }
 
     @SuppressLint("NonConstantResourceId")
-    public void onClickToppingCheckBox(View view) {
+    public void onClickToppingRadioButton(View view) {
 
-        boolean check = ((CheckBox) view).isChecked();
+        boolean check = ((RadioButton) view).isChecked();
         switch (view.getId()) {
-            case R.id.caramelCheckB:
+            case R.id.caramelDrizzleRbtn:
                 if (check)
-                    toppingChosen = caramelDrizzleCheckBox.getText().toString();
-                    toppingResult.add("Caramel drizzle");
+                    toppingChosen = caramelDrizzleRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), toppingChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.mochaCheckB:
+            case R.id.mochaDrizzleRbtn:
                 if (check)
-                    toppingChosen = mochaDrizzleCheckBox.getText().toString();
-                    toppingResult.add("Mocha drizzle");
+                    toppingChosen = mochaDrizzleRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), toppingChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.cinnamonPwdCheckB:
+            case R.id.cinnamonPwdRbtn:
                 if (check)
-                    toppingChosen = cinnamonPwdCheckBox.getText().toString();
-                    toppingResult.add("Cinnamon powder");
+                    toppingChosen = cinnamonPwdRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), toppingChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.cinnamonSgrCheckB:
+            case R.id.cinnamonSugarRbtn:
                 if (check)
-                    toppingChosen = cinnamonSgrCheckBox.getText().toString();
-                    toppingResult.add("Cinnamon sugar");
+                    toppingChosen = cinnamonSgrRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), toppingChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.nutmegCheckB:
+            case R.id.nutmegRbtn:
                 if (check)
-                    toppingChosen = nutmegCheckBox.getText().toString();
-                    toppingResult.add("Nutmeg");
+                    toppingChosen = nutmegRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), toppingChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.pumpkinCheckB:
+            case R.id.pumpkinSpiceRbtn:
                 if (check)
-                    toppingChosen = pumpkinSpiceCheckBox.getText().toString();
-                    toppingResult.add("Pumpkin spice");
+                    toppingChosen = pumpkinSpiceRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), toppingChosen, Toast.LENGTH_SHORT).show();
             case R.id.randomToppingRbtn:
                 if (check)
                     toppingChosen = Drink.genRandomDrink().getTopping();
-                    toppingResult.add(toppingChosen);
                 break;
             default:
                 break;
@@ -96,9 +85,8 @@ public class toppings extends AppCompatActivity {
         Intent flavourIntent = getIntent();
         flavourChose = flavourIntent.getStringExtra("flavourChosen");
 
-        //toppingAdded = flavourChose + " " + toppingChosen;
 
-        toppingAdded = flavourChose + " " + toppingResult;
+        toppingAdded = flavourChose + " " + toppingChosen;
 
         Intent toppingIntent = new Intent(toppings.this, activityCustomizeMe.class);
         toppingIntent.putExtra("toppingChosen", toppingAdded);

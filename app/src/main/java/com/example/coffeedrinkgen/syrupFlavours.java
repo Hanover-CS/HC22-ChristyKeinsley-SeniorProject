@@ -6,27 +6,22 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 
 public class syrupFlavours extends AppCompatActivity {
 
-    ArrayList<Object> syrupResult = new ArrayList<>();
-
     RadioButton randomSyrup;
 
-    CheckBox whiteMochaCheckBox;
-    CheckBox mochaCheckBox;
-    CheckBox vanillaCheckBox;
-    CheckBox sfVanillaCheckBox;
-    CheckBox caramelCheckBox;
-    CheckBox chaiCheckBox;
-    CheckBox hazelnutCheckBox;
-    CheckBox pumpkinSpiceCheckBox;
+    RadioButton whiteMochaRadioButton;
+    RadioButton mochaRadioButton;
+    RadioButton vanillaRadioButton;
+    RadioButton sfVanillaRadioButton;
+    RadioButton caramelRadioButton;
+    RadioButton chaiRadioButton;
+    RadioButton hazelnutRadioButton;
+    RadioButton pumpkinSpiceRadioButton;
 
     String flavourChosen;
     String flavourAdded;
@@ -39,72 +34,63 @@ public class syrupFlavours extends AppCompatActivity {
 
         randomSyrup = findViewById(R.id.randomSyrupRbtn);
 
-        whiteMochaCheckBox = findViewById(R.id.whitemochaCheckB);
-        mochaCheckBox = findViewById(R.id.mochaCheckB);
-        vanillaCheckBox = findViewById(R.id.vanillaCheckB);
-        sfVanillaCheckBox = findViewById(R.id.sfVanillaCheckB);
-        caramelCheckBox = findViewById(R.id.caramelCheckB);
-        chaiCheckBox = findViewById(R.id.chaiCheckB);
-        hazelnutCheckBox = findViewById(R.id.hazelnutCheckB);
-        pumpkinSpiceCheckBox = findViewById(R.id.pumpkinCheckB);
+        whiteMochaRadioButton = findViewById(R.id.whiteMochaRbtn);
+        mochaRadioButton = findViewById(R.id.mochaRbtn);
+        vanillaRadioButton = findViewById(R.id.vanillaRbtn);
+        sfVanillaRadioButton = findViewById(R.id.sfVanillaRbtn);
+        caramelRadioButton = findViewById(R.id.caramelRbtn);
+        chaiRadioButton = findViewById(R.id.chaiRbtn);
+        hazelnutRadioButton = findViewById(R.id.hazelnutRbtn);
+        pumpkinSpiceRadioButton = findViewById(R.id.pumpkinSpiceFlavourRbtn);
     }
 
     @SuppressLint("NonConstantResourceId")
-    public void onClickSyrupCheckBox(View view) {
-        boolean check = ((CheckBox) view).isChecked();
+    public void onClickSyrupRadioButton(View view) {
+        boolean check = ((RadioButton) view).isChecked();
         switch (view.getId()) {
 
-            case R.id.whitemochaCheckB:
+            case R.id.whiteMochaRbtn:
                 if (check)
-                    flavourChosen = whiteMochaCheckBox.getText().toString();
-                    syrupResult.add("White mocha");
+                    flavourChosen = whiteMochaRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.mochaCheckB:
+            case R.id.mochaRbtn:
                 if (check)
-                    flavourChosen = mochaCheckBox.getText().toString();
-                    syrupResult.add("Mocha");
+                    flavourChosen = mochaRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.vanillaCheckB:
+            case R.id.vanillaRbtn:
                 if (check)
-                    flavourChosen = vanillaCheckBox.getText().toString();
-                    syrupResult.add("Vanilla");
+                    flavourChosen = vanillaRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.sfVanillaCheckB:
+            case R.id.sfVanillaRbtn:
                 if (check)
-                    flavourChosen = sfVanillaCheckBox.getText().toString();
-                    syrupResult.add("SF Vanilla");
+                    flavourChosen = sfVanillaRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.caramelCheckB:
+            case R.id.caramelRbtn:
                 if (check)
-                    flavourChosen = caramelCheckBox.getText().toString();
-                    syrupResult.add("Caramel");
+                    flavourChosen = caramelRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.chaiCheckB:
+            case R.id.chaiRbtn:
                 if (check)
-                    flavourChosen = chaiCheckBox.getText().toString();
-                    syrupResult.add("Chai");
+                    flavourChosen = chaiRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.hazelnutCheckB:
+            case R.id.hazelnutRbtn:
                 if (check)
-                    flavourChosen = hazelnutCheckBox.getText().toString();
-                    syrupResult.add("Hazelnut");
+                    flavourChosen = hazelnutRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.pumpkinCheckB:
+            case R.id.pumpkinSpiceFlavourRbtn:
                 if (check)
-                    flavourChosen = pumpkinSpiceCheckBox.getText().toString();
-                syrupResult.add("Pumpkin Spice");
+                    flavourChosen = pumpkinSpiceRadioButton.getText().toString();
                 Toast.makeText(getApplicationContext(), flavourChosen, Toast.LENGTH_SHORT).show();
             case R.id.randomSyrupRbtn:
                 if (check)
                     flavourChosen = Drink.genRandomDrink().getFlavour();
-                    syrupResult.add(flavourChosen);
                 break;
             default:
                 break;
@@ -113,8 +99,7 @@ public class syrupFlavours extends AppCompatActivity {
         Intent whipIntent = getIntent();
         whipChose = whipIntent.getStringExtra("whipChosen");
 
-        //flavourAdded = whipChose + " " + flavourChosen;
-        flavourAdded = whipChose + " " + syrupResult;
+        flavourAdded = whipChose + " " + flavourChosen;
 
         Intent flavourIntent = new Intent(syrupFlavours.this, toppings.class);
         flavourIntent.putExtra("flavourChosen", flavourAdded);

@@ -23,120 +23,109 @@
         app:layout_constraintVertical_bias="0.096" />
 
 
-    <CheckBox
-        android:id="@+id/caramelDrizzleCheckB"
+    <RadioGroup
+        android:id="@+id/toppingsRadioBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="130dp"
-        android:fontFamily="@font/autour_one"
-        android:onClick="onClickToppingCheckBox"
-        android:text="@string/caramel_drizzle"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/mochaDrizzleCheckB"
-        app:layout_constraintEnd_toStartOf="@+id/cinnamonSgrCheckB"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UsingOnClickInXml" />
-
-    <CheckBox
-        android:id="@+id/mochaDrizzleCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
-        android:onClick="onClickToppingCheckBox"
-        android:text="@string/mocha_drizzle"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/cinnamonPwdCheckB"
-        app:layout_constraintEnd_toEndOf="@+id/caramelDrizzleCheckB"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/caramelDrizzleCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/caramelDrizzleCheckB"
-        tools:ignore="UsingOnClickInXml" />
-
-    <CheckBox
-        android:id="@+id/cinnamonPwdCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="100dp"
-        android:fontFamily="@font/autour_one"
-        android:onClick="onClickToppingCheckBox"
-        android:text="@string/cinnamon_powder"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/randomToppingRbtn"
-        app:layout_constraintEnd_toEndOf="@+id/mochaDrizzleCheckB"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/mochaDrizzleCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/mochaDrizzleCheckB"
-        tools:ignore="UsingOnClickInXml" />
-
-    <CheckBox
-        android:id="@+id/cinnamonSgrCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="95dp"
-        android:layout_marginBottom="52dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/cinnamon_sugar"
-        android:textSize="20sp"
-        android:onClick="onClickToppingCheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/nutmegCheckB"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/caramelDrizzleCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/pickYourToppings"
-        tools:ignore="UsingOnClickInXml" />
-
-    <CheckBox
-        android:id="@+id/nutmegCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="63dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/nutmeg"
-        android:textSize="20sp"
-        android:onClick="onClickToppingCheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/pumpkinSpiceTCheckB"
-        app:layout_constraintEnd_toEndOf="@+id/cinnamonSgrCheckB"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cinnamonSgrCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/cinnamonSgrCheckB"
-        tools:ignore="UsingOnClickInXml" />
-
-    <CheckBox
-        android:id="@+id/pumpkinSpiceTCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="164dp"
-        android:fontFamily="@font/autour_one"
-        android:onClick="onClickToppingCheckBox"
-        android:text="@string/pumpkin_spice"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/randomToppingRbtn"
-        app:layout_constraintEnd_toEndOf="@+id/nutmegCheckB"
-        app:layout_constraintHorizontal_bias="0.147"
-        app:layout_constraintStart_toStartOf="@+id/nutmegCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/nutmegCheckB"
-        tools:ignore="UsingOnClickInXml" />
-
-    <RadioButton
-        android:id="@+id/randomToppingRbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="110dp"
-        android:layout_marginBottom="54dp"
-        android:fontFamily="@font/autour_one"
-        android:onClick="onClickToppingCheckBox"
-        android:text="@string/randomize"
-        android:textSize="34sp"
+        android:layout_marginEnd="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cinnamonPwdCheckB"
-        tools:ignore="UsingOnClickInXml" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497">
+
+        <RadioButton
+            android:id="@+id/caramelDrizzleRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickToppingRadioButton"
+            android:text="@string/caramel_drizzle"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/mochaDrizzleRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickToppingRadioButton"
+            android:text="@string/mocha_drizzle"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/cinnamonPwdRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickToppingRadioButton"
+            android:text="@string/cinnamon_powder"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/cinnamonSugarRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickToppingRadioButton"
+            android:text="@string/cinnamon_sugar"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/nutmegRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickToppingRadioButton"
+            android:text="@string/nutmeg"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/pumpkinSpiceRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickToppingRadioButton"
+            android:text="@string/pumpkin_spice"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/randomToppingRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginBottom="54dp"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickToppingRadioButton"
+            android:text="@string/randomize"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UsingOnClickInXml" />
+
+    </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

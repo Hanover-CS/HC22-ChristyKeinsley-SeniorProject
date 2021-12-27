@@ -7,159 +7,146 @@
     android:layout_height="match_parent"
     tools:context=".syrupFlavours">
 
-    <CheckBox
-        android:id="@+id/chaiCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="57dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/chai"
-        android:textSize="20sp"
-        android:onClick="onClickSyrupCheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/hazelnutCheckB"
-        app:layout_constraintEnd_toEndOf="@+id/caramelCheckB"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/caramelCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/caramelCheckB" />
-
-    <CheckBox
-        android:id="@+id/vanillaCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/vanilla"
-        android:textSize="20sp"
-        android:onClick="onClickSyrupCheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/sfVanillaCheckB"
-        app:layout_constraintEnd_toEndOf="@+id/mochaCheckB"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/mochaCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/mochaCheckB" />
-
-    <CheckBox
-        android:id="@+id/whitemochaCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="60dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/white_mocha"
-        android:textAlignment="viewStart"
-        android:textSize="20sp"
-        android:onClick="onClickSyrupCheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/mochaCheckB"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52" />
-
-    <CheckBox
-        android:id="@+id/mochaCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="57dp"
-        android:text="@string/mocha"
-        android:textSize="20sp"
-        android:onClick="onClickSyrupCheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/vanillaCheckB"
-        app:layout_constraintEnd_toEndOf="@+id/whitemochaCheckB"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/whitemochaCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/whitemochaCheckB" />
-
-    <CheckBox
-        android:id="@+id/sfVanillaCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="228dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/sf_vanilla"
-        android:textSize="20sp"
-        android:onClick="onClickSyrupCheckBox"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/vanillaCheckB"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vanillaCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/vanillaCheckB" />
-
-    <CheckBox
-        android:id="@+id/caramelCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="60dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/caramel"
-        android:textSize="20sp"
-        android:onClick="onClickSyrupCheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/chaiCheckB"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.802"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UsingOnClickInXml" />
-
-    <CheckBox
-        android:id="@+id/hazelnutCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/hazelnut"
-        android:textSize="20sp"
-        android:onClick="onClickSyrupCheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/pumpkinCheckB"
-        app:layout_constraintEnd_toEndOf="@+id/chaiCheckB"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/chaiCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/chaiCheckB" />
-
-    <CheckBox
-        android:id="@+id/pumpkinCheckB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="228dp"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/pumpkin_spice"
-        android:textSize="20sp"
-        android:onClick="onClickSyrupCheckBox"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/hazelnutCheckB"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="@+id/hazelnutCheckB"
-        app:layout_constraintTop_toBottomOf="@+id/hazelnutCheckB" />
-
-    <RadioButton
-        android:id="@+id/randomSyrupRbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="110dp"
-        android:layout_marginBottom="62dp"
-        android:fontFamily="@font/autour_one"
-        android:onClick="onClickSyrupCheckBox"
-        android:text="@string/randomize"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sfVanillaCheckB"
-        tools:ignore="OnClick,UsingOnClickInXml" />
 
     <TextView
         android:id="@+id/pickYourFlavours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/autour_one"
-        android:text="@string/pick_your_flavours"
+        android:text="@string/pick_your_flavour"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.049" />
+
+
+    <RadioGroup
+        android:id="@+id/flavoursRadioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.726">
+
+        <RadioButton
+            android:id="@+id/whiteMochaRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickSyrupRadioButton"
+            android:text="@string/white_mocha"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/mochaRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickSyrupRadioButton"
+            android:text="@string/mocha"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/vanillaRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickSyrupRadioButton"
+            android:text="@string/vanilla"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/sfVanillaRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickSyrupRadioButton"
+            android:text="@string/sf_vanilla"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/caramelRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickSyrupRadioButton"
+            android:text="@string/caramel"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/chaiRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickSyrupRadioButton"
+            android:text="@string/chai"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/hazelnutRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickSyrupRadioButton"
+            android:text="@string/hazelnut"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/pumpkinSpiceFlavourRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickSyrupRadioButton"
+            android:text="@string/pumpkin_spice"
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <RadioButton
+            android:id="@+id/randomSyrupRbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginBottom="62dp"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onClickSyrupRadioButton"
+            android:text="@string/randomize"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

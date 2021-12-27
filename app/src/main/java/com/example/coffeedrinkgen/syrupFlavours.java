@@ -25,7 +25,7 @@ public class syrupFlavours extends AppCompatActivity {
 
     String flavourChosen;
     String flavourAdded;
-    String whipChose;
+    String beverageChose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,15 +96,13 @@ public class syrupFlavours extends AppCompatActivity {
                 break;
         }
 
-        Intent whipIntent = getIntent();
-        whipChose = whipIntent.getStringExtra("whipChosen");
+        Intent hotIcedOrBlendedIntent = getIntent();
+        beverageChose = hotIcedOrBlendedIntent.getStringExtra("hotIcedBlendedChosen");
 
-        flavourAdded = whipChose + " " + flavourChosen;
+        flavourAdded = beverageChose + flavourChosen + " with ";
 
-        Intent flavourIntent = new Intent(syrupFlavours.this, toppings.class);
-        flavourIntent.putExtra("flavourChosen", flavourAdded);
-        startActivity(flavourIntent);
-
-
+        Intent coffeeIntent = new Intent(syrupFlavours.this, customizeCoffee.class);
+        coffeeIntent.putExtra("flavourChosen", flavourAdded);
+        startActivity(coffeeIntent);
     }
 }

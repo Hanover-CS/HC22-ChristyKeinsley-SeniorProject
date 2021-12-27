@@ -17,7 +17,7 @@ public class whipCream extends AppCompatActivity {
 
 
     String whipChosen;
-    String milkChose;
+    String toppingChose;
     String whipAdded;
 
     @Override
@@ -52,12 +52,12 @@ public class whipCream extends AppCompatActivity {
                 break;
         }
 
-        Intent milkIntent = getIntent();
-        milkChose = milkIntent.getStringExtra("milkChosen");
+        Intent toppingIntent = getIntent();
+        toppingChose = toppingIntent.getStringExtra("toppingChosen");
 
-        whipAdded = milkChose + " " + whipChosen;
+        whipAdded = toppingChose + " " + whipChosen;
 
-        Intent whipIntent = new Intent(whipCream.this, syrupFlavours.class);
+        Intent whipIntent = new Intent(whipCream.this, activityCustomizeMe.class);
         whipIntent.putExtra("whipChosen", whipAdded);
         startActivity(whipIntent);
     }

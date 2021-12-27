@@ -16,6 +16,8 @@ public class customizeCoffee extends AppCompatActivity {
     RadioButton randomCoffeeRadioButton;
 
     String coffeeChosen;
+    String coffeeAdded;
+    String flavourChose;
 
 
     @Override
@@ -49,12 +51,23 @@ public class customizeCoffee extends AppCompatActivity {
                     break;
             }
 
-            Intent coffeeIntent = new Intent(customizeCoffee.this, hotIcedOrBlended.class);
+//            Intent coffeeIntent = new Intent(customizeCoffee.this, hotIcedOrBlended.class);
+//
+//            String coffeeAdded;
+//            //coffeeAdded = "I would like "
+//
+//            coffeeIntent.putExtra("coffeeChosen", coffeeChosen);
+//            startActivity(coffeeIntent);
 
-            String coffeeAdded;
-            //coffeeAdded = "I would like "
+            Intent flavourIntent = getIntent();
+            flavourChose = flavourIntent.getStringExtra("flavourChosen");
 
-            coffeeIntent.putExtra("coffeeChosen", coffeeChosen);
-            startActivity(coffeeIntent);
+            coffeeAdded = flavourChose + coffeeChosen + " and made with ";
+
+            Intent milkIntent = new Intent(customizeCoffee.this, alternativeMilk.class);
+            milkIntent.putExtra("coffeeChosen", coffeeAdded);
+            startActivity(milkIntent);
+
+
     }
 }

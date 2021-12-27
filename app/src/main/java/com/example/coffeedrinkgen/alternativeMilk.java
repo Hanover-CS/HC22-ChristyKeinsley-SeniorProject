@@ -26,7 +26,7 @@ public class alternativeMilk extends AppCompatActivity {
 
 
     String milkChosen;
-    String hotIcedBlendedChose;
+    String coffeeChose;
     String milkAdded;
 
     @Override
@@ -110,12 +110,12 @@ public class alternativeMilk extends AppCompatActivity {
                 break;
         }
 
-        Intent hotIcedBlendedIntent = getIntent();
-        hotIcedBlendedChose = hotIcedBlendedIntent.getStringExtra("hotIcedBlendedChosen");
+        Intent toppingIntent = getIntent();
+        coffeeChose = toppingIntent.getStringExtra("coffeeChosen");
 
-        milkAdded = hotIcedBlendedChose + " " + milkChosen;
+        milkAdded = coffeeChose + milkChosen + " with ";
 
-        Intent milkIntent = new Intent(alternativeMilk.this, whipCream.class);
+        Intent milkIntent = new Intent(alternativeMilk.this, toppings.class);
         milkIntent.putExtra("milkChosen", milkAdded);
         startActivity(milkIntent);
 

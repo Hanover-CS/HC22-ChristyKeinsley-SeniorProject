@@ -22,7 +22,7 @@ public class toppings extends AppCompatActivity {
     RadioButton pumpkinSpiceRadioButton;
 
     String toppingChosen;
-    String flavourChose;
+    String milkChose;
     String toppingAdded;
 
     @Override
@@ -82,13 +82,13 @@ public class toppings extends AppCompatActivity {
                 break;
         }
 
-        Intent flavourIntent = getIntent();
-        flavourChose = flavourIntent.getStringExtra("flavourChosen");
+        Intent milkIntent = getIntent();
+        milkChose = milkIntent.getStringExtra("milkChosen");
 
 
-        toppingAdded = flavourChose + " " + toppingChosen;
+        toppingAdded = milkChose + toppingChosen + " and ";
 
-        Intent toppingIntent = new Intent(toppings.this, activityCustomizeMe.class);
+        Intent toppingIntent = new Intent(toppings.this, whipCream.class);
         toppingIntent.putExtra("toppingChosen", toppingAdded);
         startActivity(toppingIntent);
     }

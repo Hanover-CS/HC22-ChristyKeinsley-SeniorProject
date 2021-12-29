@@ -51,14 +51,6 @@ public class customizeCoffee extends AppCompatActivity {
                     break;
             }
 
-//            Intent coffeeIntent = new Intent(customizeCoffee.this, hotIcedOrBlended.class);
-//
-//            String coffeeAdded;
-//            //coffeeAdded = "I would like "
-//
-//            coffeeIntent.putExtra("coffeeChosen", coffeeChosen);
-//            startActivity(coffeeIntent);
-
             Intent flavourIntent = getIntent();
             flavourChose = flavourIntent.getStringExtra("flavourChosen");
 

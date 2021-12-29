@@ -58,16 +58,6 @@ public class hotIcedOrBlended extends AppCompatActivity {
                 break;
         }
 
-//        Intent coffeeIntent = getIntent();
-//        coffeeChose = coffeeIntent.getStringExtra("coffeeChosen");
-//
-//        hotIcedBlendedAdded = " " + hotIcedBlendedChosen;
-//
-//        Intent hotIcedBlendedIntent = new Intent(hotIcedOrBlended.this, alternativeMilk.class);
-//        hotIcedBlendedIntent.putExtra("hotIcedBlendedChosen", hotIcedBlendedAdded);
-//        startActivity(hotIcedBlendedIntent);
-
-
         Intent hotIcedOrBlendedIntent = new Intent(hotIcedOrBlended.this, syrupFlavours.class);
 
         hotIcedBlendedAdded = "I would like " + hotIcedBlendedChosen + " ";
@@ -75,13 +65,6 @@ public class hotIcedOrBlended extends AppCompatActivity {
         hotIcedOrBlendedIntent.putExtra("hotIcedBlendedChosen", hotIcedBlendedAdded);
         startActivity(hotIcedOrBlendedIntent);
 
-//            Intent coffeeIntent = new Intent(customizeCoffee.this, hotIcedOrBlended.class);
-//
-//            String coffeeAdded;
-//            //coffeeAdded = "I would like "
-//
-//            coffeeIntent.putExtra("coffeeChosen", coffeeChosen);
-//            startActivity(coffeeIntent);
     }
 }
 

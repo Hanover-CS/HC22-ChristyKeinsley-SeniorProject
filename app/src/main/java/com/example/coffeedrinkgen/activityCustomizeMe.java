@@ -1,6 +1,5 @@
 package com.example.coffeedrinkgen;
 
-import static java.lang.String.valueOf;
 
 import androidx.appcompat.app.AppCompatActivity;
 

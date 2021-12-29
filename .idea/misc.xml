@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ibete/AndroidStudioProjects/CoffeeDrinkGen/app/src/main/res/font/.xml" value="0.1265625" />
         <entry key="..\:/Users/ibete/AndroidStudioProjects/CoffeeDrinkGen/app/src/main/res/font/autour_one.xml" value="0.234375" />
+        <entry key="..\:/Users/ibete/AndroidStudioProjects/CoffeeDrinkGen/app/src/main/res/font/bad_script.xml" value="0.1" />
+        <entry key="..\:/Users/ibete/AndroidStudioProjects/CoffeeDrinkGen/app/src/main/res/font/mclaren.xml" value="0.1" />
         <entry key="..\:/Users/ibete/AndroidStudioProjects/CoffeeDrinkGen/app/src/main/res/layout/activity_alternative_milk.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ibete/AndroidStudioProjects/CoffeeDrinkGen/app/src/main/res/layout/activity_customize_coffee.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ibete/AndroidStudioProjects/CoffeeDrinkGen/app/src/main/res/layout/activity_customize_me.xml" value="0.18" />

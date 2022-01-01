@@ -16,27 +16,27 @@
         <activity
             android:name=".toppings"
             android:exported="true"
-            android:parentActivityName=".syrupFlavours"/>
+            android:parentActivityName=".alternativeMilk"/>
         <activity
             android:name=".syrupFlavours"
             android:exported="true"
-            android:parentActivityName=".whipCream"/>
+            android:parentActivityName=".hotIcedOrBlended"/>
         <activity
             android:name=".whipCream"
             android:exported="true"
-            android:parentActivityName=".alternativeMilk"/>
+            android:parentActivityName=".toppings"/>
         <activity
             android:name=".alternativeMilk"
             android:exported="true"
-            android:parentActivityName=".hotIcedOrBlended"/>
+            android:parentActivityName=".customizeCoffee"/>
         <activity
             android:name=".hotIcedOrBlended"
             android:exported="true"
-            android:parentActivityName=".customizeCoffee"/>
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".customizeCoffee"
             android:exported="true"
-            android:parentActivityName=".activityCustomizeMe"/>
+            android:parentActivityName=".syrupFlavours"/>
         <activity
             android:name=".activityGenerateMe"
             android:exported="true"

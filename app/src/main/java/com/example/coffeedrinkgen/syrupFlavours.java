@@ -99,7 +99,7 @@ public class syrupFlavours extends AppCompatActivity {
         Intent hotIcedOrBlendedIntent = getIntent();
         beverageChose = hotIcedOrBlendedIntent.getStringExtra("hotIcedBlendedChosen");
 
-        flavourAdded = beverageChose + flavourChosen + " with ";
+        flavourAdded = beverageChose + flavourChosen + " latte with ";
 
         Intent coffeeIntent = new Intent(syrupFlavours.this, customizeCoffee.class);
         coffeeIntent.putExtra("flavourChosen", flavourAdded);

@@ -48,7 +48,7 @@ public class Drink {
         return randDrink;
     }
 
-    public String toString(){ return "I would like " + hotIcedOrBlendedOption + " " + flavourOption + " with "
+    public String toString(){ return "I would like " + hotIcedOrBlendedOption + " " + flavourOption + " latte with "
             + coffeeOption + " and made with " + milkOption + " with " + toppingOption
              + " and " + whippedCreamOption;}
 

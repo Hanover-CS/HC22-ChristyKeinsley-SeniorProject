@@ -18,7 +18,6 @@ public class hotIcedOrBlended extends AppCompatActivity {
 
     String hotIcedBlendedChosen;
     String hotIcedBlendedAdded;
-    //String coffeeChose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

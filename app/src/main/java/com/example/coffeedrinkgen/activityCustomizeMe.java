@@ -20,8 +20,8 @@ public class activityCustomizeMe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customize_me);
 
-        customizeGeneratedDrinkText = findViewById(R.id.customizedDrinkEditTxt);
-        customizeGenerateButton = findViewById(R.id.customizeDrinkBtn);
+        customizeGeneratedDrinkText = findViewById(R.id.customizeYourDrinkTxt);
+        customizeGenerateButton = findViewById(R.id.customizeGenerateBtn);
 
 
         Intent finalDrinkIntent = getIntent();

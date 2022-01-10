@@ -6,27 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".hotIcedOrBlended">
 
+    <ImageView
+        android:id="@+id/choiceBackgrounds"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/this_is_the_background_for_the_choices"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_choices"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ImageContrastCheck" />
+
+
     <RadioGroup
         android:id="@+id/hotIcedBlendedRdGp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="193dp"
-        android:layout_marginBottom="86dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081">
+        app:layout_constraintVertical_bias="0.411">
 
         <RadioButton
             android:id="@+id/hotRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickHotIcedBlendedBtn"
-            android:text="@string/hot"
-            android:textSize="34sp"
+            android:text="@string/hotLowercase"
+            android:textSize="24sp"
             tools:ignore="OnClick,UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -35,10 +52,11 @@
             android:id="@+id/icedRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickHotIcedBlendedBtn"
             android:text="@string/iced"
-            android:textSize="34sp"
+            android:textSize="24sp"
             tools:ignore="OnClick,UsingOnClickInXml"
             tools:layout_editor_absoluteX="74dp"
             tools:layout_editor_absoluteY="427dp" />
@@ -47,10 +65,11 @@
             android:id="@+id/blendedRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickHotIcedBlendedBtn"
             android:text="@string/blended"
-            android:textSize="34sp"
+            android:textSize="24sp"
             tools:ignore="OnClick,UsingOnClickInXml"
             tools:layout_editor_absoluteX="74dp"
             tools:layout_editor_absoluteY="427dp" />
@@ -59,29 +78,32 @@
             android:id="@+id/randomHotIcedBlendedRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickHotIcedBlendedBtn"
             android:text="@string/randomize"
-            android:textSize="34sp"
+            android:textSize="24sp"
             tools:ignore="OnClick,UsingOnClickInXml"
             tools:layout_editor_absoluteX="74dp"
             tools:layout_editor_absoluteY="427dp" />
 
     </RadioGroup>
 
-
     <TextView
         android:id="@+id/hotIcedBlended"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="136dp"
-        android:fontFamily="@font/autour_one"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/mclaren"
         android:text="@string/would_you_like_your_drink_to_be_hot_iced_or_blended"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/hotIcedBlendedRdGp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925" />
 </androidx.constraintlayout.widget.ConstraintLayout>

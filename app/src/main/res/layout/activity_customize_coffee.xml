@@ -6,29 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".customizeCoffee">
 
+
+    <ImageView
+        android:id="@+id/choiceBackgrounds"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/this_is_the_background_for_the_choices"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_choices"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ImageContrastCheck" />
+
+
     <TextView
         android:id="@+id/or_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
+        android:fontFamily="@font/mclaren"
         android:text="@string/would_you_like_coffee_in_your_drink_or_no_coffee"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107" />
-
+        app:layout_constraintVertical_bias="0.27" />
 
     <RadioGroup
         android:id="@+id/coffeeOrNoRGBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="328dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -36,10 +53,11 @@
             android:id="@+id/coffeeRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickCoffeeBtn"
             android:text="@string/coffee"
-            android:textSize="34sp"
+            android:textSize="24sp"
             tools:ignore="OnClick,UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -48,10 +66,11 @@
             android:id="@+id/noCoffeeRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickCoffeeBtn"
             android:text="@string/no_coffee"
-            android:textSize="34sp"
+            android:textSize="24sp"
             tools:ignore="OnClick,UsingOnClickInXml"
             tools:layout_editor_absoluteX="74dp"
             tools:layout_editor_absoluteY="427dp" />
@@ -60,10 +79,11 @@
             android:id="@+id/randomCoffeeRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickCoffeeBtn"
             android:text="@string/randomize"
-            android:textSize="34sp"
+            android:textSize="24sp"
             tools:ignore="OnClick,UsingOnClickInXml"
             tools:layout_editor_absoluteX="74dp"
             tools:layout_editor_absoluteY="427dp" />

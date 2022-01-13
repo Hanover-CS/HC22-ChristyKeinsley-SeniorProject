@@ -42,7 +42,7 @@
             android:fontFamily="@font/mclaren"
             android:minHeight="48dp"
             android:onClick="onClickHotIcedBlendedBtn"
-            android:text="@string/hotLowercase"
+            android:text="@string/hot"
             android:textSize="24sp"
             tools:ignore="OnClick,UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"

@@ -8,38 +8,55 @@
     tools:context=".toppings">
 
 
+    <ImageView
+        android:id="@+id/choiceBackgrounds"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/this_is_the_background_for_the_choices"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_choices"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck" />
+
     <TextView
         android:id="@+id/pickYourToppings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
+        android:fontFamily="@font/mclaren"
         android:text="@string/pick_your_toppings"
-        android:textSize="34sp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096" />
-
+        app:layout_constraintVertical_bias="0.189" />
 
     <RadioGroup
         android:id="@+id/toppingsRadioBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="200dp"
+        android:layout_width="224dp"
+        android:layout_height="216dp"
+        android:layout_marginEnd="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497">
+        app:layout_constraintVertical_bias="0.423">
 
         <RadioButton
             android:id="@+id/caramelDrizzleRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/caramel_drizzle"
             android:textSize="20sp"
@@ -51,7 +68,8 @@
             android:id="@+id/mochaDrizzleRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/mocha_drizzle"
             android:textSize="20sp"
@@ -63,7 +81,8 @@
             android:id="@+id/cinnamonPwdRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/cinnamon_powder"
             android:textSize="20sp"
@@ -75,7 +94,8 @@
             android:id="@+id/cinnamonSugarRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/cinnamon_sugar"
             android:textSize="20sp"
@@ -83,11 +103,23 @@
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
 
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/toppingsRadioBtn2"
+        android:layout_width="187dp"
+        android:layout_height="196dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toppingsRadioBtn"
+        app:layout_constraintTop_toTopOf="parent">
+
         <RadioButton
             android:id="@+id/nutmegRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/nutmeg"
             android:textSize="20sp"
@@ -99,7 +131,8 @@
             android:id="@+id/pumpkinSpiceRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/pumpkin_spice"
             android:textSize="20sp"
@@ -111,19 +144,14 @@
             android:id="@+id/randomToppingRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="110dp"
-            android:layout_marginBottom="54dp"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
+            android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/randomize"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="UsingOnClickInXml" />
+            android:textSize="20sp"
+            tools:ignore="UsingOnClickInXml"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="228dp" />
 
     </RadioGroup>
 

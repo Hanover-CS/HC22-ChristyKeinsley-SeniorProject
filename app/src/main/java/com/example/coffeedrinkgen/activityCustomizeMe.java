@@ -7,10 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class activityCustomizeMe extends AppCompatActivity {
 
-    EditText customizeGeneratedDrinkText;
+    TextView customizeGeneratedDrinkText;
     Button customizeGenerateButton;
 
     String finalDrink;

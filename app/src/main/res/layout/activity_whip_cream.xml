@@ -28,10 +28,10 @@
         android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/choiceBackgrounds"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.601">
+        app:layout_constraintVertical_bias="0.501">
 
         <RadioButton
             android:id="@+id/whipCreamRbtn"
@@ -90,10 +90,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/whipCreamRGBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.716" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

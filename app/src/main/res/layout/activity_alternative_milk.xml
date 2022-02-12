@@ -15,7 +15,7 @@
         android:src="@drawable/background_choices"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -28,14 +28,14 @@
         android:fontFamily="@font/mclaren"
         android:text="@string/choose_a_Milk"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
+        app:layout_constraintVertical_bias="0.252" />
 
     <RadioGroup
         android:id="@+id/milkRadioBtn"
@@ -44,8 +44,10 @@
         android:layout_marginEnd="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/milkRadioBtn2"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458">
 
         <RadioButton
             android:id="@+id/onePercentRbtn"
@@ -55,7 +57,7 @@
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/one_percent"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -68,7 +70,7 @@
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/two_percent"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -81,7 +83,7 @@
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/whole_milk"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -94,7 +96,7 @@
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/nonfat_milk"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -107,7 +109,7 @@
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/heavy_cream"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -120,7 +122,7 @@
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/breve"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -135,9 +137,10 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
         app:layout_constraintStart_toStartOf="@+id/choiceBackgrounds"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.472">
+        app:layout_constraintVertical_bias="0.437">
 
 
         <RadioButton
@@ -148,7 +151,7 @@
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/coconut_milk"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -157,11 +160,11 @@
             android:id="@+id/almondMilkRbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/autour_one"
+            android:fontFamily="@font/mclaren"
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/almond_milk"
-            android:textSize="18sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -174,7 +177,7 @@
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/soy_milk"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -187,7 +190,7 @@
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/oat_milk"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -200,7 +203,7 @@
             android:minHeight="48dp"
             android:onClick="onClickMilkBtn"
             android:text="@string/randomize"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />

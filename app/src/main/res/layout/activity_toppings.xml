@@ -30,26 +30,25 @@
         android:fontFamily="@font/mclaren"
         android:text="@string/pick_your_toppings"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.189" />
+        app:layout_constraintVertical_bias="0.257" />
 
     <RadioGroup
         android:id="@+id/toppingsRadioBtn"
-        android:layout_width="224dp"
-        android:layout_height="216dp"
+        android:layout_width="274dp"
+        android:layout_height="255dp"
         android:layout_marginEnd="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423">
+        app:layout_constraintVertical_bias="0.459">
 
         <RadioButton
             android:id="@+id/caramelDrizzleRbtn"
@@ -59,7 +58,7 @@
             android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/caramel_drizzle"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -72,7 +71,7 @@
             android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/mocha_drizzle"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -85,7 +84,7 @@
             android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/cinnamon_powder"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -98,7 +97,7 @@
             android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/cinnamon_sugar"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -107,12 +106,14 @@
 
     <RadioGroup
         android:id="@+id/toppingsRadioBtn2"
-        android:layout_width="187dp"
-        android:layout_height="196dp"
+        android:layout_width="210dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="84dp"
         android:layout_marginBottom="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/toppingsRadioBtn"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484">
 
         <RadioButton
             android:id="@+id/nutmegRbtn"
@@ -122,7 +123,7 @@
             android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/nutmeg"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -135,7 +136,7 @@
             android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/pumpkin_spice"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />
@@ -148,7 +149,7 @@
             android:minHeight="48dp"
             android:onClick="onClickToppingRadioButton"
             android:text="@string/randomize"
-            android:textSize="20sp"
+            android:textSize="24sp"
             tools:ignore="UsingOnClickInXml"
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="228dp" />

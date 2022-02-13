@@ -17,7 +17,6 @@ public class hotIcedOrBlended extends AppCompatActivity {
     RadioButton randomHotIcedBlendedRadioButton;
 
     String hotIcedBlendedChosen;
-    String hotIcedBlendedAdded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +58,7 @@ public class hotIcedOrBlended extends AppCompatActivity {
 
         Intent hotIcedOrBlendedIntent = new Intent(hotIcedOrBlended.this, syrupFlavours.class);
 
-        hotIcedBlendedAdded = "I would like " + hotIcedBlendedChosen + " ";
+        String hotIcedBlendedAdded = "I would like " + hotIcedBlendedChosen + " ";
 
         hotIcedOrBlendedIntent.putExtra("hotIcedBlendedChosen", hotIcedBlendedAdded);
         startActivity(hotIcedOrBlendedIntent);

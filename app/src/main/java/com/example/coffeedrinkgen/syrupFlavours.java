@@ -24,8 +24,6 @@ public class syrupFlavours extends AppCompatActivity {
     RadioButton pumpkinSpiceRadioButton;
 
     String flavourChosen;
-    String flavourAdded;
-    String beverageChose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,9 +95,9 @@ public class syrupFlavours extends AppCompatActivity {
         }
 
         Intent hotIcedOrBlendedIntent = getIntent();
-        beverageChose = hotIcedOrBlendedIntent.getStringExtra("hotIcedBlendedChosen");
+        String beverageChose = hotIcedOrBlendedIntent.getStringExtra("hotIcedBlendedChosen");
 
-        flavourAdded = beverageChose + flavourChosen + " latte with ";
+        String flavourAdded = beverageChose + flavourChosen + " latte with ";
 
         Intent coffeeIntent = new Intent(syrupFlavours.this, customizeCoffee.class);
         coffeeIntent.putExtra("flavourChosen", flavourAdded);

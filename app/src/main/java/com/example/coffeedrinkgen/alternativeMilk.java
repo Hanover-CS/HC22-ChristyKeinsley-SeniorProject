@@ -23,11 +23,7 @@ public class alternativeMilk extends AppCompatActivity {
     RadioButton soyRadioButton;
     RadioButton randomMilkRadioButton;
 
-
-
     String milkChosen;
-    String coffeeChose;
-    String milkAdded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,9 +107,9 @@ public class alternativeMilk extends AppCompatActivity {
         }
 
         Intent toppingIntent = getIntent();
-        coffeeChose = toppingIntent.getStringExtra("coffeeChosen");
+        String coffeeChose = toppingIntent.getStringExtra("coffeeChosen");
 
-        milkAdded = coffeeChose + milkChosen + " with ";
+        String milkAdded = coffeeChose + milkChosen + " with ";
 
         Intent milkIntent = new Intent(alternativeMilk.this, toppings.class);
         milkIntent.putExtra("milkChosen", milkAdded);

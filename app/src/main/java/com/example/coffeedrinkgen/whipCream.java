@@ -15,10 +15,7 @@ public class whipCream extends AppCompatActivity {
     RadioButton noWhipCreamRadioButton;
     RadioButton randomWhipCreamRadioButton;
 
-
     String whipChosen;
-    String toppingChose;
-    String whipAdded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +50,9 @@ public class whipCream extends AppCompatActivity {
         }
 
         Intent toppingIntent = getIntent();
-        toppingChose = toppingIntent.getStringExtra("toppingChosen");
+        String toppingChose = toppingIntent.getStringExtra("toppingChosen");
 
-        whipAdded = toppingChose + " " + whipChosen;
+        String whipAdded = toppingChose + " " + whipChosen;
 
         Intent whipIntent = new Intent(whipCream.this, activityCustomizeMe.class);
         whipIntent.putExtra("whipChosen", whipAdded);

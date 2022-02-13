@@ -22,8 +22,6 @@ public class toppings extends AppCompatActivity {
     RadioButton pumpkinSpiceRadioButton;
 
     String toppingChosen;
-    String milkChose;
-    String toppingAdded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,10 +81,10 @@ public class toppings extends AppCompatActivity {
         }
 
         Intent milkIntent = getIntent();
-        milkChose = milkIntent.getStringExtra("milkChosen");
+        String milkChose = milkIntent.getStringExtra("milkChosen");
 
 
-        toppingAdded = milkChose + toppingChosen + " and ";
+        String toppingAdded = milkChose + toppingChosen + " and ";
 
         Intent toppingIntent = new Intent(toppings.this, whipCream.class);
         toppingIntent.putExtra("toppingChosen", toppingAdded);

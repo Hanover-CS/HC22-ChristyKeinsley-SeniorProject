@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class activityGenerateMe extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,8 +20,7 @@ public class activityGenerateMe extends AppCompatActivity {
         TextView generatedDrinkText = findViewById(R.id.yourDrinkTxt);
         Button generateButton = findViewById(R.id.generateBtn);
 
+        Drink drink = Drink.genRandomDrink();
         generateButton.setOnClickListener(view -> generatedDrinkText.setText(valueOf(drink)));
     }
-
-    Drink drink = Drink.genRandomDrink();
 }

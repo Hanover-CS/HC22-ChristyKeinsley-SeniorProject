@@ -19,7 +19,7 @@ public class Drink {
     private final static List<String> toppingList = Arrays.asList("caramel drizzle", "mocha drizzle",
             "cinnamon powder", "cinnamon sugar", "nutmeg", "pumpkin spice");
 
-    private final static List<String> milkList = Arrays.asList("1%", "2%", "nonfat milk","whole milk", "heavy cream",
+    private final static List<String> milkList = Arrays.asList("one percent", "two percent", "nonfat milk","whole milk", "heavy cream",
             "breve", "almond milk", "coconut milk", "oat milk", "soy milk");
 
     private final static List<String> whipCreamList = Arrays.asList("whip cream", "no whip");

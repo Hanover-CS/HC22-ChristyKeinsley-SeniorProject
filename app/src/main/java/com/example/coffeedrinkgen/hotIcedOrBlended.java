@@ -27,7 +27,6 @@ public class hotIcedOrBlended extends AppCompatActivity {
         icedRadioButton = findViewById(R.id.icedRbtn);
         blendedRadioButton = findViewById(R.id.blendedRbtn);
         randomHotIcedBlendedRadioButton = findViewById(R.id.randomHotIcedBlendedRbtn);
-
     }
 
         @SuppressLint("NonConstantResourceId")
